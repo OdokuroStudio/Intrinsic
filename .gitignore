@@ -1,0 +1,42 @@
+# Eclipse specific files
+bin/
+*.launch
+.settings/
+.metadata/
+.classpath
+.project
+
+# IntelliJ IDEA specific files
+out/
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# Gradle files
+build/
+.gradle/
+
+# Other unnecessary files
+eclipse/
+run/
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# Ignore temporary files
+*.tmp
+*.log
+
+
+# !build/libs/*.jar
+
+# Do not ignore these important files
+!src/
+!build.gradle
+!settings.gradle
+!gradlew
+!gradlew.bat
+!README.md
+!LICENSE
+!CONTRIBUTING.md

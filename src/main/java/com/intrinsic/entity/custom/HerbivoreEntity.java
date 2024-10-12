@@ -15,6 +15,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+@SuppressWarnings("ALL")
 public class HerbivoreEntity extends SheepEntity {
 
     public HerbivoreEntity(EntityType<? extends SheepEntity> type, World worldIn) {
