@@ -15,6 +15,10 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 @SuppressWarnings("ALL")
 public class HerbivoreEntity extends SheepEntity {
 
@@ -69,23 +73,43 @@ public class HerbivoreEntity extends SheepEntity {
             this.entity = entity;
         }
 
+        private int searchCooldown = 0;
+
         @Override
         public boolean canUse() {
-            // Random chance to eat and check for nearby custom flora
-            if (entity.getRandom().nextInt(2) == 0) {
-                // Look for custom flora within a certain radius
+            // Only search every few ticks to avoid constant searching
+            if (searchCooldown > 0) {
+                searchCooldown--;
+                return false;
+            }
+
+            // Random chance to start searching for custom flora
+            if (entity.getRandom().nextInt(5) == 0) {
+                // Create a list of positions to search
+                List<BlockPos> possiblePositions = new ArrayList<>();
                 for (int x = -5; x <= 5; x++) {
                     for (int z = -5; z <= 5; z++) {
-                        BlockPos pos = entity.blockPosition().offset(x, 0, z);
-                        if (entity.level.getBlockState(pos).getBlock() instanceof CustomFlora) {
-                            targetFloraPos = pos; // Set target flora position
-                            return true; // Found custom flora to eat
-                        }
+                        possiblePositions.add(entity.blockPosition().offset(x, 0, z));
+                    }
+                }
+
+                // Shuffle the positions to search in a random order
+                Collections.shuffle(possiblePositions, entity.getRandom());
+
+                // Search through the shuffled positions for custom flora
+                for (BlockPos pos : possiblePositions) {
+                    if (entity.level.getBlockState(pos).getBlock() instanceof CustomFlora) {
+                        targetFloraPos = pos; // Set target flora position
+                        searchCooldown = 20; // Set cooldown for 1 second (20 ticks)
+                        return true; // Found custom flora to eat
                     }
                 }
             }
-            return false; // No custom flora found
+
+            // If no custom flora is found, return false
+            return false;
         }
+
 
         @Override
         public void start() {
