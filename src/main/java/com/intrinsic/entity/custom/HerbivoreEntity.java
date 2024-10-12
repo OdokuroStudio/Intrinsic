@@ -2,7 +2,6 @@ package com.intrinsic.entity.custom;
 
 import com.intrinsic.flora.CustomFlora;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -63,6 +62,7 @@ public class HerbivoreEntity extends SheepEntity {
     // Custom goal for eating custom flora
     static class EatCustomFloraGoal extends Goal {
         private final HerbivoreEntity entity;
+        private BlockPos targetFloraPos;
 
         public EatCustomFloraGoal(HerbivoreEntity entity) {
             this.entity = entity;
@@ -70,8 +70,58 @@ public class HerbivoreEntity extends SheepEntity {
 
         @Override
         public boolean canUse() {
-            return entity.getRandom().nextInt(10) == 0; // Random chance to eat
+            // Random chance to eat and check for nearby custom flora
+            if (entity.getRandom().nextInt(2) == 0) {
+                // Look for custom flora within a certain radius
+                for (int x = -5; x <= 5; x++) {
+                    for (int z = -5; z <= 5; z++) {
+                        BlockPos pos = entity.blockPosition().offset(x, 0, z);
+                        if (entity.level.getBlockState(pos).getBlock() instanceof CustomFlora) {
+                            targetFloraPos = pos; // Set target flora position
+                            return true; // Found custom flora to eat
+                        }
+                    }
+                }
+            }
+            return false; // No custom flora found
         }
 
+        @Override
+        public void start() {
+            if (targetFloraPos != null) {
+                entity.getNavigation().moveTo(targetFloraPos.getX(), targetFloraPos.getY(), targetFloraPos.getZ(), 1.0D);
+            }
+        }
+
+        @Override
+        public void tick() {
+            // Continuously move towards the custom flora
+            if (targetFloraPos != null) {
+                double distance = entity.distanceToSqr(targetFloraPos.getX(), targetFloraPos.getY(), targetFloraPos.getZ());
+                if (distance > 3) {
+                    // Keep navigating towards the target
+                    entity.getNavigation().moveTo(targetFloraPos.getX(), targetFloraPos.getY(), targetFloraPos.getZ(), 1.0D);
+                } else {
+                    // Close enough to eat
+                    eatCustomFlora();
+                    entity.getNavigation().stop(); // Stop navigation after eating
+                }
+            }
+        }
+
+        private void eatCustomFlora() {
+            // Check if the block is the custom flora
+            if (entity.level.getBlockState(targetFloraPos).getBlock() instanceof CustomFlora) {
+                entity.level.destroyBlock(targetFloraPos, true); // Remove the custom flora block
+                // Optional: play a sound or restore health
+            } else {
+                System.out.println("Target is not custom flora!");
+            }
+        }
+
+        @Override
+        public boolean canContinueToUse() {
+            return targetFloraPos != null && entity.level.getBlockState(targetFloraPos).getBlock() instanceof CustomFlora;
+        }
     }
 }
