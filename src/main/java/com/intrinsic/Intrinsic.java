@@ -3,13 +3,13 @@ package com.intrinsic; // Update this to your package
 import com.intrinsic.blocks.ModBlocks;
 import com.intrinsic.entity.ModEntityTypes;
 import com.intrinsic.entity.custom.HerbivoreEntity;
+import com.intrinsic.entity.render.CarnivoreEntityRenderer;
 import com.intrinsic.entity.render.HerbivoreEntityRenderer;
 import com.intrinsic.item.custom.ModSpawnEggItem;
 import com.intrinsic.item.custom.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -72,6 +72,7 @@ public class Intrinsic
         RenderTypeLookup.setRenderLayer(ModBlocks.CUSTOM_FLORA, RenderType.cutout());
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.HERBIVORE.get(), HerbivoreEntityRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CARNIVORE.get(), CarnivoreEntityRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -93,7 +94,7 @@ public class Intrinsic
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-        // Do something when the server starts
+        // Register the command
         LOGGER.info("HELLO from server starting");
     }
 

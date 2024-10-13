@@ -1,6 +1,7 @@
 package com.intrinsic.events;
 
 import com.intrinsic.Intrinsic;
+import com.intrinsic.entity.custom.CarnivoreEntity;
 import com.intrinsic.entity.custom.HerbivoreEntity;
 import com.intrinsic.item.custom.ModSpawnEggItem;
 import net.minecraft.entity.EntityType;
@@ -15,7 +16,9 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.HERBIVORE.get(), HerbivoreEntity.setCustomAttributes().build());
+        event.put(ModEntityTypes.CARNIVORE.get(), CarnivoreEntity.setCustomAttributes().build());
     }
+
 
     @SubscribeEvent
     public static void onRegisterEntities(RegistryEvent.Register<EntityType<?>> event) {
