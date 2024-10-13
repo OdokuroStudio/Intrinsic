@@ -20,6 +20,12 @@ public class ModItems {
                             0xFFFFFF, 0x000000,
                             new Item.Properties().tab(ItemGroup.TAB_MISC)));
 
+    public static final RegistryObject<ModSpawnEggItem> CARNIVORE_SPAWN_EGG =
+            ITEMS.register("carnivore_spawn_egg",
+                    () -> new ModSpawnEggItem(ModEntityTypes.CARNIVORE,
+                            0xFFFFFF, 0x000000,
+                            new Item.Properties().tab(ItemGroup.TAB_MISC)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

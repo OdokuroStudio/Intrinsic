@@ -7,10 +7,10 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 
 public class HerbivoreEntityRenderer extends MobRenderer<HerbivoreEntity, HerbivoreModel<HerbivoreEntity>> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("intrinsic", "textures/entity/herbivore.png"); // Change to your texture path
+    private static final ResourceLocation TEXTURE = new ResourceLocation("intrinsic", "textures/entity/herbivore.png");
 
     public HerbivoreEntityRenderer(EntityRendererManager renderManager) {
-        super(renderManager, new HerbivoreModel<>(), 0.5F); // Adjust the shadow size as needed
+        super(renderManager, new HerbivoreModel<>(), 0.5f);
     }
 
     @Override

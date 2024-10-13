@@ -3,15 +3,16 @@ package com.intrinsic; // Update this to your package
 import com.intrinsic.blocks.ModBlocks;
 import com.intrinsic.entity.ModEntityTypes;
 import com.intrinsic.entity.custom.HerbivoreEntity;
+import com.intrinsic.entity.render.CarnivoreEntityRenderer;
 import com.intrinsic.entity.render.HerbivoreEntityRenderer;
 import com.intrinsic.item.custom.ModSpawnEggItem;
 import com.intrinsic.item.custom.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -27,6 +28,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.world.biome.MobSpawnInfo;
 
 
 import java.util.stream.Collectors;
@@ -72,6 +74,7 @@ public class Intrinsic
         RenderTypeLookup.setRenderLayer(ModBlocks.CUSTOM_FLORA, RenderType.cutout());
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.HERBIVORE.get(), HerbivoreEntityRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CARNIVORE.get(), CarnivoreEntityRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -93,7 +96,7 @@ public class Intrinsic
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
-        // Do something when the server starts
+        // Register the command
         LOGGER.info("HELLO from server starting");
     }
 
@@ -109,10 +112,10 @@ public class Intrinsic
     @SubscribeEvent
     public static void registerEntityTypes(RegistryEvent.Register<EntityType<?>> event) {
         event.getRegistry().registerAll(
-                EntityType.Builder.of(HerbivoreEntity::new, EntityClassification.CREATURE)
-                        .sized(0.6F, 0.8F) // Adjust size as necessary
-                        .build("intrinsic:herbivore") // Use the full registry name directly here
+                ModEntityTypes.HERBIVORE.get(),
+                ModEntityTypes.CARNIVORE.get()
         );
     }
+
 }
 
