@@ -17,13 +17,14 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<HerbivoreEntity>> HERBIVORE =
             ENTITY_TYPES.register("herbivore",
-                    () -> EntityType.Builder.of(HerbivoreEntity::new, EntityClassification.CREATURE).sized(1f, 3f)
+                    () -> EntityType.Builder.of(HerbivoreEntity::new, EntityClassification.CREATURE).sized(0.6f, 0.6f)
                             .build(new ResourceLocation(Intrinsic.MOD_ID, "herbivore").toString()));
 
     public static final RegistryObject<EntityType<CarnivoreEntity>> CARNIVORE =
             ENTITY_TYPES.register("carnivore",
-                    () -> EntityType.Builder.of(CarnivoreEntity::new, EntityClassification.CREATURE).sized(1f, 3f)
+                    () -> EntityType.Builder.of(CarnivoreEntity::new, EntityClassification.CREATURE).sized(0.6f, 0.6f)
                             .build(new ResourceLocation(Intrinsic.MOD_ID, "carnivore").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

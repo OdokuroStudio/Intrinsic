@@ -12,6 +12,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -27,6 +28,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.world.biome.MobSpawnInfo;
 
 
 import java.util.stream.Collectors;
@@ -110,10 +112,10 @@ public class Intrinsic
     @SubscribeEvent
     public static void registerEntityTypes(RegistryEvent.Register<EntityType<?>> event) {
         event.getRegistry().registerAll(
-                EntityType.Builder.of(HerbivoreEntity::new, EntityClassification.CREATURE)
-                        .sized(0.6F, 0.8F) // Adjust size as necessary
-                        .build("intrinsic:herbivore") // Use the full registry name directly here
+                ModEntityTypes.HERBIVORE.get(),
+                ModEntityTypes.CARNIVORE.get()
         );
     }
+
 }
 
