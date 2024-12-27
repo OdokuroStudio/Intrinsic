@@ -127,6 +127,9 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# Test file
+test.py
+
 # Environments
 .env
 .venv
@@ -135,6 +138,18 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Node js stuff
+node_modules/
+
+# IntelliJ IDEA/IDE-based IDEs
+.idea/
+*.iml
+out/
+
+# Exclude user-specific files
+*.iws
+*.ipr
 
 # Spyder project settings
 .spyderproject
