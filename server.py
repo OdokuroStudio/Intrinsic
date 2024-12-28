@@ -10,14 +10,12 @@ from serf import (
     actions, extract_state, get_action, dqn_update
 )
 
-# We need to update EPSILON in the dqn_logic, so let's keep a reference
-#   or ensure we can set it from here. We'll do it carefully in the code below.
 
 step_count = 0
 
 async def control_bots():
     global step_count
-    global EPSILON  # We declare it global so we can modify it from here
+    global EPSILON  # Declared it global so we can modify it from here
 
     uri = "ws://localhost:3000"
     async with connect(uri) as websocket:
@@ -28,7 +26,7 @@ async def control_bots():
         last_action = [None] * BOT_COUNT
 
         async def send_actions():
-            nonlocal step_count, EPSILON
+            global step_count, EPSILON
 
             while True:
                 for bot_id in range(BOT_COUNT):
