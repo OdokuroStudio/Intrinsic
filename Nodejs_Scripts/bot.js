@@ -36,8 +36,16 @@ function createBot(username) {
   })
 
   bot.on('move', () => rewards.onMove(bot))
+
   bot.on('diggingCompleted', (block) => rewards.onDiggingCompleted(bot, block))
+
   bot.on('health', () => rewards.onHealth(bot))
+
+  bot.on('consume', (foodItem) => {
+    if (foodItem?.name) {
+      rewards.onEat(bot, foodItem.name)
+    }
+  })
 
   setInterval(() => rewards.onIdle(bot), 5000)
   bot.on('playerCollect', (collector, itemDrop) => {
@@ -60,7 +68,7 @@ for (let i = 0; i < BOT_COUNT; i++) {
 ws.on('connection', (socket) => {
   console.log('WebSocket connection established')
 
-  // Listen for action commands from Python
+  // Listen for action commands from Python server
   socket.on('message', async (data) => {
     try {
       const message = JSON.parse(data)
