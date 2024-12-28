@@ -1,5 +1,5 @@
 @echo off
 echo Starting bot.js...
-start cmd /k "cd minecraft_bot && node bot.js"
+start cmd /k "cd Nodejs_Scripts && node bot.js"
 echo Starting server.py...
 start cmd /k "python server.py"
