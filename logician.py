@@ -1,144 +1,123 @@
-# logician.py
-
-import math
-import json
-
-class Expression:
-    """
-    Base class for all logical expressions.
-    Subclasses must implement:
-        - evaluate(context): returns True/False based on the context
-    """
-
-    def evaluate(self, context):
-        raise NotImplementedError("Subclasses must implement evaluate().")
+from pyvis.network import Network
 
 
-class Var(Expression):
-    """
-    Represents a logical variable, e.g. 'hungry', 'has_food', etc.
-    Its value is taken from the 'context' dict at runtime.
-    """
-    def __init__(self, name):
-        self.name = name
+class MinecraftLogicGraph:
+    def __init__(self):
+        self.graph = {}
+        self.network = Network(height="750px", width="100%", notebook=False, directed=True)
 
-    def evaluate(self, context):
-        # Return True if the variable is True in the context; False otherwise.
-        return bool(context.get(self.name, False))
+    def add_condition(self, condition):
+        """
+        Adds a condition node to the graph.
 
-    def __repr__(self):
-        return f"Var({self.name})"
+        """
+        if condition not in self.graph:
+            self.graph[condition] = []
+            self.network.add_node(condition, label=condition, color="skyblue", shape="ellipse")
 
+    def add_action(self, action):
+        """
+        Adds an action node to the graph.
 
-class Not(Expression):
-    """
-    Represents logical NOT.
-    """
-    def __init__(self, child: Expression):
-        self.child = child
+        """
+        if action not in self.graph:
+            self.graph[action] = []
+            self.network.add_node(action, label=action, color="lightgreen", shape="box")
 
-    def evaluate(self, context):
-        return not self.child.evaluate(context)
+    def add_logic(self, conditions, action, description, operator="AND"):
+        """
+        Add a logical rule to the graph.
 
-    def __repr__(self):
-        return f"Not({self.child})"
+        :param conditions: List of condition nodes.
+                           For "IMPLIES", it should be [A] where A implies the action.
+                           For other operators, this can be multiple conditions.
+        :param action: The action (node) resulting from the conditions.
+        :param description: Description of the logical relationship.
+        :param operator: Logical operator ("AND", "OR", "IMPLIES", "NOT").
+        """
+        operator_node = None
 
+        if operator == "IMPLIES":
+            if len(conditions) != 1:
+                raise ValueError("IMPLIES operator requires exactly one condition [A] where A implies the action.")
+            condition = conditions[0]
+            operator_node = f"(IMPLIES): {condition} → {action}"
+            self.add_condition(condition)
+            self.add_action(action)
 
-class And(Expression):
-    """
-    Represents logical AND of two sub-expressions.
-    """
-    def __init__(self, left: Expression, right: Expression):
-        self.left = left
-        self.right = right
+            # Add operator node and connect it
+            self.network.add_node(operator_node, label="IMPLIES", color="orange", shape="diamond")
+            self.graph[condition] = self.graph.get(condition, []) + [operator_node]
+            self.graph[operator_node] = [action]
+            self.network.add_edge(condition, operator_node, title="If True, Implies")
+            self.network.add_edge(operator_node, action, title=description)
 
-    def evaluate(self, context):
-        return self.left.evaluate(context) and self.right.evaluate(context)
+        elif operator in {"AND", "OR"}:
+            operator_node = f"({operator}): " + (" ∧ ".join(conditions) if operator == "AND" else " ∨ ".join(conditions))
+            self.network.add_node(operator_node, label=operator, color="orange", shape="diamond")
+            self.graph[operator_node] = []
+            for condition in conditions:
+                self.add_condition(condition)
+                self.graph[condition] = self.graph.get(condition, []) + [operator_node]
+                self.network.add_edge(condition, operator_node, title=f"Part of {operator}")
 
-    def __repr__(self):
-        return f"And({self.left}, {self.right})"
+            self.add_action(action)
+            self.graph[operator_node].append(action)
+            self.network.add_edge(operator_node, action, title=description)
 
+        elif operator == "NOT":
+            if len(conditions) != 1:
+                raise ValueError("NOT operator requires exactly one condition.")
+            condition = conditions[0]
+            operator_node = f"(NOT): ¬{condition}"
+            self.add_condition(condition)
+            self.add_action(action)  # Ensure the action node is added
+            self.network.add_node(operator_node, label="NOT", color="orange", shape="diamond")
+            self.graph[condition] = self.graph.get(condition, []) + [operator_node]
+            self.graph[operator_node] = [action]
+            self.network.add_edge(condition, operator_node, title="Negates")
+            self.network.add_edge(operator_node, action, title=description)
 
-class Or(Expression):
-    """
-    Represents logical OR of two sub-expressions.
-    """
-    def __init__(self, left: Expression, right: Expression):
-        self.left = left
-        self.right = right
+        else:
+            raise ValueError(f"Unsupported operator: {operator}")
 
-    def evaluate(self, context):
-        return self.left.evaluate(context) or self.right.evaluate(context)
+    def visualize(self, output_file="logic_graph.html"):
+        """
+        Generates and saves an interactive visualization of the graph with a dark theme.
 
-    def __repr__(self):
-        return f"Or({self.left}, {self.right})"
+        """
+        self.network.write_html(output_file)
 
+        with open(output_file, "r") as file:
+            html = file.read()
 
-class Implies(Expression):
-    """
-    Represents logical implication
-    """
-    def __init__(self, child: Expression):
-        self.child = child
+        dark_theme = """
+        <style>
+            body { background-color: #1e1e2f; color: #c0c0c0; }
+            .vis-network { background-color: #1e1e2f; }
+            .node { color: #f1f1f1; }
+        </style>
+        """
+        html = html.replace("</head>", dark_theme + "</head>")
 
-    def evaluate(self, context):
-        return self.child.evaluate(context)
+        with open(output_file, "w") as file:
+            file.write(html)
 
-    def __repr__(self):
-        return f"Implies({self.child})"
-
-
-
-# ------------------------------------------------------------------------------
-# Optional: Serialization to/from a JSON-friendly dictionary
-# ------------------------------------------------------------------------------
-
-def serialize_expr(expr: Expression):
-    """
-    Converts an expression into a JSON-serializable dict structure.
-    """
-    if isinstance(expr, Var):
-        return {"type": "Var", "name": expr.name}
-    elif isinstance(expr, Not):
-        return {
-            "type": "Not",
-            "child": serialize_expr(expr.child)
-        }
-    elif isinstance(expr, And):
-        return {
-            "type": "And",
-            "left": serialize_expr(expr.left),
-            "right": serialize_expr(expr.right)
-        }
-    elif isinstance(expr, Or):
-        return {
-            "type": "Or",
-            "left": serialize_expr(expr.left),
-            "right": serialize_expr(expr.right)
-        }
-    elif isinstance(expr, Implies):
-        return {
-            "type": "Implies",
-            "child": serialize_expr(expr.child)
-        }
-    else:
-        raise ValueError("Unknown expression type for serialization")
+        print(f"Graph visualization saved as {output_file} with a dark theme.")
 
 
-def deserialize_expr(data: dict) -> Expression:
-    """
-    Recreate an Expression object from a dict.
-    """
-    etype = data["type"]
-    if etype == "Var":
-        return Var(data["name"])
-    elif etype == "Not":
-        return Not(deserialize_expr(data["child"]))
-    elif etype == "And":
-        return And(deserialize_expr(data["left"]), deserialize_expr(data["right"]))
-    elif etype == "Or":
-        return Or(deserialize_expr(data["left"]), deserialize_expr(data["right"]))
-    elif etype == "Implies":
-        return Implies(deserialize_expr(data["child"]))
-    else:
-        raise ValueError(f"Unknown expression type '{etype}' in deserialization")
+# Example usage
+if __name__ == "__main__":
+    logic_graph = MinecraftLogicGraph()
+
+    # Adding logic rules
+    logic_graph.add_logic(["Hungry", "Has Food"], "Eat Food", "Restores hunger", operator="AND")
+    logic_graph.add_logic(["Has Sword", "Enemy Nearby"], "Attack Enemy", "Fight enemies when armed", operator="AND")
+    logic_graph.add_logic(["Low Health", "Enemy Nearby"], "Retreat", "Avoid combat when weak", operator="OR")
+    logic_graph.add_logic(["Daylight"], "Safety", "Daylight implies safety from hostile mobs", operator="IMPLIES")
+    logic_graph.add_logic(["Lava Nearby"], "Avoid Lava", "Lava is dangerous", operator="IMPLIES")
+    logic_graph.add_logic(["Lava Nearby"], "Safe to Proceed", "No lava means it's safe", operator="NOT")
+
+    # Visualize
+    logic_graph.visualize("minecraft_logic_graph.html")
+
