@@ -3,9 +3,9 @@ import json
 from websockets import connect
 
 # Import everything from our DQN file
-from serf import (
+from Roles.serf import (
     BOT_COUNT, BATCH_SIZE, UPDATE_TARGET_INTERVAL,
-    EPSILON, EPSILON_DECAY, EPSILON_MIN,
+    EPSILON_DECAY, EPSILON_MIN,
     model, target_model, replay_buffer,
     actions, extract_state, get_action, dqn_update
 )

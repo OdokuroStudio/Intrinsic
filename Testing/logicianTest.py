@@ -1,4 +1,4 @@
-from logician import *
+from Roles.logician import *
 
 def main():
     logic_graph = MinecraftLogicGraph()
