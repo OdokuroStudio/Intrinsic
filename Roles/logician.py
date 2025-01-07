@@ -1,5 +1,6 @@
-from pyvis.network import Network
+# logician.py
 
+from pyvis.network import Network
 
 class MinecraftLogicGraph:
     def __init__(self):
