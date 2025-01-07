@@ -1,4 +1,5 @@
 // bot.js
+
 const mineflayer = require('mineflayer')
 const WebSocket = require('ws')
 const Vec3 = require('vec3').Vec3
