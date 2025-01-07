@@ -1,0 +1,20 @@
+Ideas.txt
+
+Savant models trained to do one task effectively bound together by the logician:
++ Quickly train new rewards
++ Can retain previous known info
++ Decent way to combine logician (if this is true I should do this)
+- Confusing to implement
+
+Novelty trained:
++ No strict reward function
+- improved novelty bus requires a basis of training so they don't just die
+
+Genetically trained:
++ One of the best for learning / novelty
+- AI's may become cohesive and miss a path that could have been explored
+- Still requires a defined reward function
+
+Deep Q:
++ Effective survival and choosing of tasks
+- Requires a strict reward function
