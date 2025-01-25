@@ -3,32 +3,32 @@
         {
             "id": "A",
             "label": "A",
-            "color": "skyblue"
+            "color": "skyblue",
+            "value": true
         },
         {
             "id": "C",
             "label": "C",
-            "color": "lightgreen"
+            "color": "lightgreen",
+            "value": false
         },
         {
             "id": "B",
             "label": "B",
-            "color": "skyblue"
-        },
-        {
-            "id": "F",
-            "label": "F",
-            "color": "lightgreen"
+            "color": "skyblue",
+            "value": true
         },
         {
             "id": "D",
             "label": "D",
-            "color": "skyblue"
+            "color": "lightgreen",
+            "value": false
         },
         {
             "id": "E",
             "label": "E",
-            "color": "lightgreen"
+            "color": "lightgreen",
+            "value": false
         }
     ],
     "edges": [
@@ -36,37 +36,29 @@
             "source": "A",
             "target": "C",
             "relation": "AND",
-            "color": "orange"
+            "color": "orange",
+            "group": "ABC"
         },
         {
             "source": "B",
             "target": "C",
             "relation": "AND",
-            "color": "orange"
-        },
-        {
-            "source": "A",
-            "target": "F",
-            "relation": "OR",
-            "color": "purple"
-        },
-        {
-            "source": "D",
-            "target": "F",
-            "relation": "OR",
-            "color": "purple"
+            "color": "orange",
+            "group": "ABC"
         },
         {
             "source": "C",
             "target": "D",
             "relation": "IMPLIES",
-            "color": "red"
+            "color": "red",
+            "group": "CD"
         },
         {
             "source": "D",
             "target": "E",
             "relation": "NOT",
-            "color": "blue"
+            "color": "blue",
+            "group": "DE"
         }
     ]
 }
