@@ -4,9 +4,9 @@ def main():
     graph = Logician()
 
     # Define nodes and logic
-    graph.add_logic(["A", "B"], "C", "AND", "ABC")  # C is true if A AND B are true
-    graph.add_logic(["C"], "D", "IMPLIES", "CD")  # D is true if C is true
-    graph.add_logic(["D"], "E", "NOT", "DE")      # E is true if D is false
+    graph.add_logic(["A", "B"], "C", "AND", "AB")  # C is true if A AND B are true
+    graph.add_logic(["C"], "D", "IMPLIES", "C")  # D is true if C is true
+    graph.add_logic(["D"], "E", "NOT", "D")      # E is true if D is false
 
     # Evaluate graph with initial updates
     updates = [["A", True], ["B", True]]  # Set A and B to True

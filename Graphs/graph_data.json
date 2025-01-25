@@ -10,7 +10,7 @@
             "id": "C",
             "label": "C",
             "color": "lightgreen",
-            "value": false
+            "value": true
         },
         {
             "id": "B",
@@ -37,28 +37,28 @@
             "target": "C",
             "relation": "AND",
             "color": "orange",
-            "group": "ABC"
+            "group": "AB"
         },
         {
             "source": "B",
             "target": "C",
             "relation": "AND",
             "color": "orange",
-            "group": "ABC"
+            "group": "AB"
         },
         {
             "source": "C",
             "target": "D",
             "relation": "IMPLIES",
             "color": "red",
-            "group": "CD"
+            "group": "C"
         },
         {
             "source": "D",
             "target": "E",
             "relation": "NOT",
             "color": "blue",
-            "group": "DE"
+            "group": "D"
         }
     ]
 }

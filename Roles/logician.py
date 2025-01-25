@@ -4,23 +4,25 @@ class Logician:
     def __init__(self):
         # TODO: tree for these or search time is gonna become a big ol problem when propagating frequently
 
-        self.nodes = []  # List of nodes
-        self.edges = []  # List of edges
+        self.nodes = {}
+        self.edges = {}
         self.node_values = {}  # Dictionary to store truth values of nodes
 
     def add_node(self, node_id, label, color="skyblue"):
         """
-        Adds a unique node to the graph.
+        Adds nodes to the graph.
         """
-        if not any(node["id"] == node_id for node in self.nodes):
-            self.nodes.append({"id": node_id, "label": label, "color": color})
-            self.node_values[node_id] = False  # Initialize node value as False
+        if node_id not in self.nodes:
+            self.nodes[node_id] = {"label": label, "color": color}
+            self.node_values[node_id] = False
 
     def add_edge(self, source, target, operator, color, group):
         """
         Adds a directed edge between two nodes.
         """
-        self.edges.append({"source": source, "target": target, "relation": operator, "color": color, "group": group})
+        if source not in self.edges:
+            self.edges[source] = []
+        self.edges[source].append({"target": target, "relation": operator, "color": color, "group": group})
 
     def add_logic(self, conditions, action, operator, group):
         """
@@ -40,8 +42,33 @@ class Logician:
             self.add_node(action, action, "lightgreen")
             self.add_edge(condition, action, operator, edge_color, group)
 
-        print(self.nodes)
-        print(self.edges)
+    def propagate(self, updated_nodes):
+        """
+        Propagates the updated node values through the graph.
+        """
+
+        for node_id, node_value in updated_nodes:
+            # Check if the node has outgoing edges
+            if node_id not in self.edges:
+                continue
+
+            # Iterate through edges originating from this node
+            for edge in self.edges[node_id]:
+                target = edge["target"]
+                operator = edge["relation"]
+                group = edge.get("group", [])
+
+                # Process based on operator
+                if operator == "IMPLIES":
+                    self.node_values[target] = not node_value
+                elif operator == "NOT":
+                    self.node_values[target] = not node_value
+                elif operator == "AND":
+                    self.node_values[target] = all(self.node_values.get(n, False) for n in group)
+                elif operator == "OR":
+                    self.node_values[target] = any(self.node_values.get(n, False) for n in group)
+
+        print("Node values after propagation:", self.node_values)
 
     def update_graph(self, updated_nodes):
         """
@@ -57,26 +84,32 @@ class Logician:
 
             self.node_values[node_id] = node_value
 
-            print(f"Updated node '{node_id}' to {'True' if node_value else 'False'}")
-
-
-
-    def propagate(self):
-        """
-        Propagates the updated node values to nodes that have no direct input
-        """
-        for node in self.node_values:
-            node_id = node.key
-            node_value = node.value
+        self.propagate(updated_nodes)
 
     def export_to_json(self, output_file="../Graphs/graph_data.json"):
         """
         Exports the graph to a JSON file.
         """
         graph_data = {
-            "nodes": [{"id": node["id"], "label": node["label"], "color": node["color"], "value": self.node_values[node["id"]]} for node in self.nodes],
-            "edges": self.edges,
+            "nodes": [
+                {
+                    "id": node_id,
+                    "label": node_data["label"],
+                    "color": node_data["color"],
+                    "value": self.node_values[node_id],
+                }
+                for node_id, node_data in self.nodes.items()
+            ],
+            "edges": [
+                {
+                    "source": source,
+                    **edge
+                }
+                for source, edges in self.edges.items()
+                for edge in edges
+            ],
         }
         with open(output_file, "w") as file:
             json.dump(graph_data, file, indent=4)
         print(f"Graph data saved to {output_file}")
+
