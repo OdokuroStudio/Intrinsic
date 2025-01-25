@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3.js Interactive Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #c0c0c0;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        svg {
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            display: block; /* Remove small spacing from inline SVGs */
+        }
+
+        .node circle {
+            fill: #69b3a2;
+            stroke: #333;
+            stroke-width: 2px;
+        }
+
+        text {
+            fill: white;
+            font-size: 14px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Load graph data
+        fetch('graph_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                const svg = d3.select("body").append("svg");
+
+                const g = svg.append("g");
+
+                // Adds zoom and pan behavior
+                const zoom = d3.zoom()
+                    .scaleExtent([0.5, 5]) // Zoom scale
+                    .on("zoom", (event) => {
+                        g.attr("transform", event.transform);
+                    });
+
+                svg.call(zoom);
+
+                const simulation = d3.forceSimulation(data.nodes)
+                    .force("link", d3.forceLink(data.edges).id(d => d.id).distance(100))
+                    .force("charge", d3.forceManyBody().strength(-300))
+                    .force("center", d3.forceCenter(width / 2, height / 2));
+
+                // Draw the edges (links)
+                const link = g.selectAll(".link")
+                    .data(data.edges)
+                    .enter().append("line")
+                    .attr("class", "link")
+                    .style("stroke", d => d.color) // Sets edge color
+                    .style("stroke-width", 2);
+
+                // Draw the nodes
+                const node = g.selectAll(".node")
+                    .data(data.nodes)
+                    .enter().append("g")
+                    .attr("class", "node")
+                    .call(drag(simulation));
+
+                node.append("circle")
+                    .attr("r", 10)
+                    .attr("fill", d => d.color);
+
+                node.append("text")
+                    .attr("dx", 12)
+                    .attr("dy", ".35em")
+                    .text(d => d.label);
+
+                simulation.on("tick", () => {
+                    link
+                        .attr("x1", d => d.source.x)
+                        .attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x)
+                        .attr("y2", d => d.target.y);
+
+                    node
+                        .attr("transform", d => `translate(${d.x},${d.y})`);
+                });
+
+                function drag(simulation) {
+                    return d3.drag()
+                        .on("start", (event, d) => {
+                            if (!event.active) simulation.alphaTarget(0.3).restart();
+                            d.fx = d.x;
+                            d.fy = d.y;
+                        })
+                        .on("drag", (event, d) => {
+                            d.fx = event.x;
+                            d.fy = event.y;
+                        })
+                        .on("end", (event, d) => {
+                            if (!event.active) simulation.alphaTarget(0);
+                            d.fx = null;
+                            d.fy = null;
+                        });
+                }
+            });
+    </script>
+</body>
+</html>

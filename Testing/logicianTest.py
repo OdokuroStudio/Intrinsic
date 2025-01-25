@@ -1,18 +1,16 @@
 from Roles.logician import *
 
 def main():
-    logic_graph = MinecraftLogicGraph()
+    graph = Logician()
 
-    # Adding logic rules
-    logic_graph.add_logic(["Hungry", "Has Food"], "Eat Food", "Restores hunger", operator="AND")
-    logic_graph.add_logic(["Has Sword", "Enemy Nearby"], "Attack Enemy", "Fight enemies when armed", operator="AND")
-    logic_graph.add_logic(["Low Health", "Enemy Nearby"], "Retreat", "Avoid combat when weak", operator="OR")
-    logic_graph.add_logic(["Daylight"], "Safety", "Daylight implies safety from hostile mobs", operator="IMPLIES")
-    logic_graph.add_logic(["Lava Nearby"], "Avoid Lava", "Lava is dangerous", operator="IMPLIES")
-    logic_graph.add_logic(["Lava Nearby"], "Safe to Proceed", "No lava means it's safe", operator="NOT")
+    # Add nodes and logic
+    graph.add_logic(["A", "B"], "C", "AND")
+    graph.add_logic(["A", "D"], "F", "OR")
+    graph.add_logic(["C"], "D", "IMPLIES")
+    graph.add_logic(["D"], "E", "NOT")
 
-    # Visualize
-    logic_graph.visualize("minecraft_logic_graph.html")
+    # Export to JSON
+    graph.export_to_json()
 
 
 if __name__ == "__main__":

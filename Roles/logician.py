@@ -1,109 +1,46 @@
-# logician.py
+import json
 
-from pyvis.network import Network
-
-class MinecraftLogicGraph:
+class Logician:
     def __init__(self):
-        self.graph = {}
-        self.network = Network(height="750px", width="100%", notebook=False, directed=True)
+        self.nodes = []  # List of nodes
+        self.edges = []  # List of edges
 
-    def add_condition(self, condition):
+    def add_node(self, node_id, label, color="skyblue"):
         """
-        Adds a condition node to the graph.
-
+        Adds a unique node to the graph.
         """
-        if condition not in self.graph:
-            self.graph[condition] = []
-            self.network.add_node(condition, label=condition, color="skyblue", shape="ellipse")
+        if not any(node["id"] == node_id for node in self.nodes):
+            self.nodes.append({"id": node_id, "label": label, "color": color})
 
-    def add_action(self, action):
+    def add_edge(self, source, target, operator, color):
         """
-        Adds an action node to the graph.
-
+        Adds a directed edge between two nodes.
         """
-        if action not in self.graph:
-            self.graph[action] = []
-            self.network.add_node(action, label=action, color="lightgreen", shape="box")
+        self.edges.append({"source": source, "target": target, "relation": operator, "color": color})
 
-    def add_logic(self, conditions, action, description, operator="AND"):
+    def add_logic(self, conditions, action, operator="AND"):
         """
-        Add a logical rule to the graph.
-
-        :param conditions: List of condition nodes.
-                           For "IMPLIES", it should be [A] where A implies the action.
-                           For other operators, this can be multiple conditions.
-        :param action: The action (node) resulting from the conditions.
-        :param description: Description of the logical relationship.
-        :param operator: Logical operator ("AND", "OR", "IMPLIES", "NOT").
+        Connects multiple conditions directly to the action, with edges representing the operator.
         """
-        operator_node = None
+        operator_colors = {
+            "AND": "orange",
+            "OR": "purple",
+            "IMPLIES": "red",
+            "NOT": "blue"
+        }
+        edge_color = operator_colors.get(operator, "gray")
 
-        if operator == "IMPLIES":
-            if len(conditions) != 1:
-                raise ValueError("IMPLIES operator requires exactly one condition [A] where A implies the action.")
-            condition = conditions[0]
-            operator_node = f"(IMPLIES): {condition} → {action}"
-            self.add_condition(condition)
-            self.add_action(action)
+        # Add each condition as a separate node and connect to the action
+        for condition in conditions:
+            self.add_node(condition, condition, "skyblue")
+            self.add_node(action, action, "lightgreen")
+            self.add_edge(condition, action, operator, edge_color)
 
-            # Add operator node and connect it
-            self.network.add_node(operator_node, label="IMPLIES", color="orange", shape="diamond")
-            self.graph[condition] = self.graph.get(condition, []) + [operator_node]
-            self.graph[operator_node] = [action]
-            self.network.add_edge(condition, operator_node, title="If True, Implies")
-            self.network.add_edge(operator_node, action, title=description)
-
-        elif operator in {"AND", "OR"}:
-            operator_node = f"({operator}): " + (" ∧ ".join(conditions) if operator == "AND" else " ∨ ".join(conditions))
-            self.network.add_node(operator_node, label=operator, color="orange", shape="diamond")
-            self.graph[operator_node] = []
-            for condition in conditions:
-                self.add_condition(condition)
-                self.graph[condition] = self.graph.get(condition, []) + [operator_node]
-                self.network.add_edge(condition, operator_node, title=f"Part of {operator}")
-
-            self.add_action(action)
-            self.graph[operator_node].append(action)
-            self.network.add_edge(operator_node, action, title=description)
-
-        elif operator == "NOT":
-            if len(conditions) != 1:
-                raise ValueError("NOT operator requires exactly one condition.")
-            condition = conditions[0]
-            operator_node = f"(NOT): ¬{condition}"
-            self.add_condition(condition)
-            self.add_action(action)  # Ensure the action node is added
-            self.network.add_node(operator_node, label="NOT", color="orange", shape="diamond")
-            self.graph[condition] = self.graph.get(condition, []) + [operator_node]
-            self.graph[operator_node] = [action]
-            self.network.add_edge(condition, operator_node, title="Negates")
-            self.network.add_edge(operator_node, action, title=description)
-
-        else:
-            raise ValueError(f"Unsupported operator: {operator}")
-
-    def visualize(self, output_file="logic_graph.html"):
+    def export_to_json(self, output_file="../Graphs/graph_data.json"):
         """
-        Generates and saves an interactive visualization of the graph with a dark theme.
-
+        Exports the graph to a JSON file.
         """
-        self.network.write_html(output_file)
-
-        with open(output_file, "r") as file:
-            html = file.read()
-
-        dark_theme = """
-        <style>
-            body { background-color: #1e1e2f; color: #c0c0c0; }
-            .vis-network { background-color: #1e1e2f; }
-            .node { color: #f1f1f1; }
-        </style>
-        """
-        html = html.replace("</head>", dark_theme + "</head>")
-
+        graph_data = {"nodes": self.nodes, "edges": self.edges}
         with open(output_file, "w") as file:
-            file.write(html)
-
-        print(f"Graph visualization saved as {output_file} with a dark theme.")
-
-
+            json.dump(graph_data, file, indent=4)
+        print(f"Graph data saved to {output_file}")

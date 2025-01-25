@@ -1,0 +1,72 @@
+{
+    "nodes": [
+        {
+            "id": "A",
+            "label": "A",
+            "color": "skyblue"
+        },
+        {
+            "id": "C",
+            "label": "C",
+            "color": "lightgreen"
+        },
+        {
+            "id": "B",
+            "label": "B",
+            "color": "skyblue"
+        },
+        {
+            "id": "F",
+            "label": "F",
+            "color": "lightgreen"
+        },
+        {
+            "id": "D",
+            "label": "D",
+            "color": "skyblue"
+        },
+        {
+            "id": "E",
+            "label": "E",
+            "color": "lightgreen"
+        }
+    ],
+    "edges": [
+        {
+            "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange"
+        },
+        {
+            "source": "B",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange"
+        },
+        {
+            "source": "A",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple"
+        },
+        {
+            "source": "D",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple"
+        },
+        {
+            "source": "C",
+            "target": "D",
+            "relation": "IMPLIES",
+            "color": "red"
+        },
+        {
+            "source": "D",
+            "target": "E",
+            "relation": "NOT",
+            "color": "blue"
+        }
+    ]
+}
