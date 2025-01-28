@@ -1,9 +1,9 @@
+# logician.py
+
 import json
 
 class Logician:
     def __init__(self):
-        # TODO: tree for these or search time is gonna become a big ol problem when propagating frequently
-
         self.nodes = {}
         self.edges = {}
         self.node_values = {}  # Dictionary to store truth values of nodes
@@ -42,11 +42,37 @@ class Logician:
             self.add_node(action, action, "lightgreen")
             self.add_edge(condition, action, operator, edge_color, group)
 
+    def load_from_json(self, input_file="../Graphs/graph_data.json"):
+        """
+        Loads a graph from a JSON file and appends its data to the current graph.
+        """
+        try:
+            with open(input_file, "r") as file:
+                graph_data = json.load(file)
+
+            # Append nodes
+            for node in graph_data["nodes"]:
+                node_id = node["id"]
+                self.add_node(node_id, node["label"], node["color"])
+                self.node_values[node_id] = node.get("value", False)
+
+            # Append edges
+            for edge in graph_data["edges"]:
+                self.add_edge(
+                    edge["source"],
+                    edge["target"],
+                    edge["relation"],
+                    edge["color"],
+                    edge.get("group", [])
+                )
+            print(f"Graph data loaded and appended from {input_file}")
+        except FileNotFoundError:
+            print(f"File {input_file} not found. Starting with an empty graph.")
+
     def propagate(self, updated_nodes):
         """
         Propagates the updated node values through the graph.
         """
-
         for node_id, node_value in updated_nodes:
             # Check if the node has outgoing edges
             if node_id not in self.edges:
@@ -74,7 +100,6 @@ class Logician:
         """
         Updates the node values in the graph (without propagation)
         """
-
         for node in updated_nodes:
             node_id = node[0]
             node_value = node[1]
@@ -112,4 +137,3 @@ class Logician:
         with open(output_file, "w") as file:
             json.dump(graph_data, file, indent=4)
         print(f"Graph data saved to {output_file}")
-
