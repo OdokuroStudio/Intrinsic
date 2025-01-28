@@ -29,11 +29,38 @@
             "label": "E",
             "color": "lightgreen",
             "value": false
+        },
+        {
+            "id": "F",
+            "label": "F",
+            "color": "lightgreen",
+            "value": true
         }
     ],
     "edges": [
         {
             "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "A",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        },
+        {
+            "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "B",
             "target": "C",
             "relation": "AND",
             "color": "orange",
@@ -59,6 +86,13 @@
             "relation": "NOT",
             "color": "blue",
             "group": "D"
+        },
+        {
+            "source": "E",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
         }
     ]
 }
