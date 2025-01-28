@@ -3,7 +3,7 @@ import json
 from websockets import connect
 
 # Import everything from our DQN file
-from Roles.serf import (
+from serf import (
     BOT_COUNT, BATCH_SIZE, UPDATE_TARGET_INTERVAL,
     EPSILON_DECAY, EPSILON_MIN,
     model, target_model, replay_buffer,
