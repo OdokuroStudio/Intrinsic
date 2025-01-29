@@ -4,19 +4,19 @@
             "id": "A",
             "label": "A",
             "color": "skyblue",
-            "value": true
+            "value": false
         },
         {
             "id": "C",
             "label": "C",
             "color": "lightgreen",
-            "value": true
+            "value": false
         },
         {
             "id": "B",
             "label": "B",
             "color": "skyblue",
-            "value": true
+            "value": false
         },
         {
             "id": "D",
@@ -34,7 +34,7 @@
             "id": "F",
             "label": "F",
             "color": "lightgreen",
-            "value": true
+            "value": false
         }
     ],
     "edges": [

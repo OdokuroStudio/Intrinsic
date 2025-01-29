@@ -6,6 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import optim
 from collections import deque
+import os
 
 # ====================
 # 1) The BotNet
@@ -48,16 +49,23 @@ class ReplayBuffer:
     def __len__(self):
         return len(self.buffer)
 
+# =========================
+# Save model periodically
+# =========================
+def save_model():
+    torch.save(model.state_dict(), MODEL_PATH)
+    print(f"Model saved!")
+
 
 # =========================
 # 3) Hyperparameters
 # =========================
 BOT_COUNT = 6
 
-INPUT_SIZE = 25
-HIDDEN_SIZE = 128
-OUTPUT_SIZE = 35
-NUM_HIDDEN_LAYERS = 3
+INPUT_SIZE = 40
+HIDDEN_SIZE = 256
+OUTPUT_SIZE = 19
+NUM_HIDDEN_LAYERS = 4
 
 GAMMA = 0.99
 EPSILON = 0.2
@@ -67,27 +75,34 @@ BATCH_SIZE = 32
 REPLAY_CAPACITY = 5000
 UPDATE_TARGET_INTERVAL = 50
 
+MODEL_PATH = "model.pth"
+SAVE_INTERVAL = 1000
+
 # =========================
 # 4) Actions list
 # =========================
 actions = [
     "MOVE_FORWARD", "STOP_FORWARD", "MOVE_BACK", "STOP_BACK",
     "JUMP", "LOOK_AT", "BREAK_BLOCK",
-    "PLACE_BLOCK", "ATTACK", "PICKUP_ITEM", "USE_ITEM",
+    "PLACE_BLOCK", "ATTACK", "PICKUP_ITEM",
     "TURN_LEFT", "TURN_RIGHT", "STRAFE_LEFT", "STRAFE_RIGHT",
-    "DROP_ITEM", "DROP_ALL", "SWAP_HANDS", "CRAFT",
-    "PLACE_LADDER", "INTERACT_ENTITY", "USE_DOOR",
-    "ACTIVATE_LEVER", "COLLECT_ITEM", "SHOOT_BOW",
-    "BLOCK_WITH_SHIELD", "CHASE_ENTITY", "NAVIGATE_TO",
-    "CLIMB", "FIND_BLOCK", "EAT", "SLEEP", "RESPAWN",
-    "USE_FURNACE", "USE_CHEST"
+    "DROP_ITEM", "DROP_ALL",
+    "EAT", "SLEEP", "RESPAWN",
 ]
+"""
+"USE_ITEM", "SWAP_HANDS", "CRAFT", "PLACE_LADDER", "INTERACT_ENTITY", "USE_DOOR",
+"ACTIVATE_LEVER", "COLLECT_ITEM", "SHOOT_BOW", "NAVIGATE_TO", "BLOCK_WITH_SHIELD",
+"USE_FURNACE", "USE_CHEST", "CLIMB", "CHASE_ENTITY",
+"""
 
 
 # =========================
 # 5) Create networks & optimizer
 # =========================
 model = BotNet(INPUT_SIZE, HIDDEN_SIZE, OUTPUT_SIZE, NUM_HIDDEN_LAYERS)
+if os.path.exists(MODEL_PATH):
+    model.load_state_dict(torch.load(MODEL_PATH))
+    print(f"Loaded existing model from {MODEL_PATH}")
 target_model = BotNet(INPUT_SIZE, HIDDEN_SIZE, OUTPUT_SIZE, NUM_HIDDEN_LAYERS)
 target_model.load_state_dict(model.state_dict())
 
@@ -115,7 +130,7 @@ def extract_state(msg):
 
     surroundings = msg.get("surroundings", [])
     coords_list = []
-    for i in range(5):
+    for i in range(10):  # Adjusted to include 10 nearby blocks
         if i < len(surroundings):
             bx = surroundings[i]["x"]
             by = surroundings[i]["y"]
@@ -173,4 +188,8 @@ def dqn_update(batch):
     loss.backward()
     optimizer.step()
 
+
+
+
     return loss.item()
+

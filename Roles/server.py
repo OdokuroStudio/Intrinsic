@@ -3,19 +3,14 @@ import json
 from websockets import connect
 
 # Import everything from our DQN file
-from serf import (
-    BOT_COUNT, BATCH_SIZE, UPDATE_TARGET_INTERVAL,
-    EPSILON_DECAY, EPSILON_MIN,
-    model, target_model, replay_buffer,
-    actions, extract_state, get_action, dqn_update
-)
+from serf import *
 
-
+# Initialize EPSILON with the initial exploration rate
+EPSILON = 1.0  # Starting exploration rate
 step_count = 0
 
 async def control_bots():
-    global step_count
-    global EPSILON  # Declared it global so we can modify it from here
+    global step_count, EPSILON
 
     uri = "ws://localhost:3000"
     async with connect(uri) as websocket:
@@ -41,17 +36,17 @@ async def control_bots():
                         }
                         await websocket.send(json.dumps(action_message))
 
-                step_count += 1
-
                 # Update target network periodically
                 if step_count % UPDATE_TARGET_INTERVAL == 0:
+                    # TODO add random telport so models can train on new locations
                     target_model.load_state_dict(model.state_dict())
+                    save_model()
 
                 # Decay epsilon
                 EPSILON = max(EPSILON * EPSILON_DECAY, EPSILON_MIN)
 
                 # ~10 actions per second
-                await asyncio.sleep(0.1)
+                await asyncio.sleep(0.5)
 
         async def receive_messages():
             while True:
@@ -80,6 +75,7 @@ async def control_bots():
                     if len(replay_buffer) >= BATCH_SIZE:
                         batch_data = replay_buffer.sample(BATCH_SIZE)
                         loss_val = dqn_update(batch_data)
+
                         print(f"Loss={loss_val:.4f}, Reward={reward:.2f}")
 
                 except asyncio.CancelledError:

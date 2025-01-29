@@ -22,7 +22,8 @@ function onMove(bot) {
   if (!bot._lastPosition) return
   const currPos = bot.entity.position
   if (!currPos.equals(bot._lastPosition)) {
-    bot._currentReward += 0.05
+    bot._currentReward += Math.abs(currPos.x - bot._lastPosition.x) + Math.abs(currPos.z - bot._lastPosition.z)
+    console.log(Math.abs(currPos.x - bot._lastPosition.x) + Math.abs(currPos.z - bot._lastPosition.z))
     bot._lastPosition = currPos.clone()
   }
 }
@@ -32,7 +33,7 @@ function onDiggingCompleted(bot, block) {
   const blockName = block.name
   if (!blockName || blockName === 'air') return
 
-  const base = itemRewards[blockName]?.baseReward ?? 0.1
+  const base = itemRewards[blockName]?.baseReward ?? .1
   bot._currentReward += base
   console.log(`${bot.username} broke block: ${blockName}, +${base} reward`)
 }
@@ -48,8 +49,8 @@ function onHealth(bot) {
 
 // 6) Idle penalty
 function onIdle(bot) {
-  bot._currentReward -= 0.1
-  console.log(`${bot.username} idle, -0.1 reward`)
+  bot._currentReward -= 10
+  console.log(`${bot.username} idle, -10 reward`)
 }
 
 // 7) Increment count & use config for item-based reward
@@ -92,10 +93,10 @@ function onEat(bot, itemName) {
 // 10) Killing animals
 function onEntityKilled(bot, entityName) {
   const animalRewards = {
-    pig: 0.4,
-    cow: 0.5,
-    sheep: 0.4,
-    chicken: 0.3,
+    pig: 40,
+    cow: 50,
+    sheep: 40,
+    chicken: 30,
   }
   const reward = animalRewards[entityName] || 0
   if (reward > 0) {
