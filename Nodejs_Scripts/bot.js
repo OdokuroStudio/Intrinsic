@@ -10,18 +10,21 @@ const {
 } = require('mineflayer-pathfinder')
 
 const rewards = require('./rewards')
-const { handleAction } = require('./actions')  // <-- Import our handleAction function
+const { handleAction } = require('./actions')
 
+const RECONNECT_DELAY = 5000;
 const BOT_COUNT = 6
 const bots = []
 const ws = new WebSocket.Server({ port: 3000 })
 console.log("WebSocket server started on port 3000")
 
-function createBot(username) {
+function createBot(username, botId) {
+  console.log(`Creating bot: ${username}`)
+
   const bot = mineflayer.createBot({
     host: 'localhost',
     port: 25565,
-    username: username
+    username: username,
   })
 
   bot.loadPlugin(pathfinder)
@@ -37,11 +40,8 @@ function createBot(username) {
   })
 
   bot.on('move', () => rewards.onMove(bot))
-
   bot.on('diggingCompleted', (block) => rewards.onDiggingCompleted(bot, block))
-
   bot.on('health', () => rewards.onHealth(bot))
-
   bot.on('consume', (foodItem) => {
     if (foodItem?.name) {
       rewards.onEat(bot, foodItem.name)
@@ -56,14 +56,33 @@ function createBot(username) {
 
   bot.getAndResetReward = () => rewards.getAndResetReward(bot)
 
-  bot.on('kicked', (reason) => console.log(`${username} was kicked: ${reason}`))
-  bot.on('error', (err) => console.log(`${username} encountered an error: ${err}`))
+  function reconnect() {
+    console.log(`${username} will attempt to reconnect in ${RECONNECT_DELAY / 1000} seconds...`)
+    setTimeout(() => {
+      bots[botId] = createBot(username, botId) // Replace the bot instance
+    }, RECONNECT_DELAY)
+  }
+
+  bot.on('kicked', (reason) => {
+    console.log(`${username} was kicked: ${reason}`)
+    reconnect()
+  })
+
+  bot.on('error', (err) => {
+    console.log(`${username} encountered an error: ${err}`)
+    reconnect()
+  })
+
+  bot.on('end', () => {
+    console.log(`${username} disconnected from the server.`)
+    reconnect()
+  })
 
   return bot
 }
 
 for (let i = 0; i < BOT_COUNT; i++) {
-  bots.push(createBot(`Bot_${i}`))
+  bots.push(createBot(`Bot_${i}`, i))
 }
 
 ws.on('connection', (socket) => {
