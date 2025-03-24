@@ -13,10 +13,10 @@ def parse_args():
     # fmt: off
     parser.add_argument("--run-name", type=str, default=None,
         help="Unique name for the run. Defaults to a random uuid.")
-    parser.add_argument("--runs-dir", type=str, default="./run-logs/",
-        help="Name of the directory where run's data is stored. Defaults to './run-logs/'")
+    parser.add_argument("--runs-dir", type=str, default="./run-room/",
+        help="Name of the directory where run's data is stored. Defaults to './run-room/'")
 
-    parser.add_argument("--env-id", type=str, default="Craftium/ChopTree-v0",
+    parser.add_argument("--env-id", type=str, default="Craftium/Room-v0",
         help="Name (registered) of the environment.")
     parser.add_argument("--total-timesteps", type=int, default=10_000_000,
         help="Number of timesteps to train for.")
@@ -32,6 +32,9 @@ def make_env(env_id):
     def _init():
         # set up the environment
         craftium_kwargs = dict(
+            render_mode="human",
+            #obs_width=512,
+            #obs_height=512,
             frameskip=3,
             rgb_observations=False,
             gray_scale_keepdim=True,

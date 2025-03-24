@@ -1,0 +1,7 @@
+recursive-include craftium/bin *
+recursive-include craftium/builtin *
+recursive-include craftium/fonts *
+recursive-include craftium/locale *
+recursive-include craftium/textures *
+recursive-include craftium/client *
+recursive-include craftium/craftium-envs *

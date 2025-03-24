@@ -1,0 +1,9 @@
+2025-03-22 08:55:25: [Main]: World 'world' not available. Available worlds:
+2025-03-22 08:55:25: [Main]: 	room		/home/zss/Intrinsic/craftium/craftium/minetest-run-375906cf-93ac-4d15-8e66-fc7086e60f2e/bin/../worlds/world
+2025-03-22 08:55:25: [Main]: Automatically selecting world at [/home/zss/Intrinsic/craftium/craftium/minetest-run-375906cf-93ac-4d15-8e66-fc7086e60f2e/bin/../worlds/world]
+2025-03-22 08:55:25: [Main]: Using game specified by --gameid on the command line
+2025-03-22 08:55:25: ERROR[Main]: ServerError: Some mods have unsatisfied dependencies:
+2025-03-22 08:55:25: ERROR[Main]:  - craftium_room is missing: default
+2025-03-22 08:55:25: ERROR[Main]: Install and enable the required mods, or disable the mods causing errors.
+2025-03-22 08:55:25: ERROR[Main]: Note: this may be caused by a dependency cycle, in which case try updating the mods.
+2025-03-22 08:55:25: ACTION[ServerStop]: Server: Shutting down

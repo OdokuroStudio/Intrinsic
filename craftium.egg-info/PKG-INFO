@@ -1,0 +1,403 @@
+Metadata-Version: 2.1
+Name: craftium
+Version: 0.0.1
+Summary: A Gymnasium wrapper for the minetest game engine
+License: 
+        License of Minetest textures and sounds
+        ---------------------------------------
+        
+        This applies to textures and sounds contained in the main Minetest
+        distribution.
+        
+        Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+        http://creativecommons.org/licenses/by-sa/3.0/
+        
+        textures/base/pack/refresh.png is under the Apache 2 license
+        https://www.apache.org/licenses/LICENSE-2.0.html
+        
+        Textures by Zughy are under CC BY-SA 4.0
+        https://creativecommons.org/licenses/by-sa/4.0/
+        
+        Media files by DS are under CC BY-SA 4.0
+        https://creativecommons.org/licenses/by-sa/4.0/
+        
+        textures/base/pack/server_public.png is under CC-BY 4.0, taken from Twitter's Twemoji set
+        https://creativecommons.org/licenses/by/4.0/
+        
+        Authors of media files
+        -----------------------
+        Everything not listed in here:
+        Copyright (C) 2010-2012 celeron55, Perttu Ahola <celeron55@gmail.com>
+        
+        ShadowNinja:
+          textures/base/pack/smoke_puff.png
+        
+        paramat:
+          textures/base/pack/menu_header.png
+          textures/base/pack/next_icon.png
+          textures/base/pack/prev_icon.png
+          textures/base/pack/clear.png
+          textures/base/pack/search.png
+        
+        rubenwardy, paramat:
+          textures/base/pack/start_icon.png
+          textures/base/pack/end_icon.png
+        
+        erlehmann:
+          misc/minetest-icon-24x24.png
+          misc/minetest-icon.ico
+          misc/minetest.svg
+          textures/base/pack/logo.png
+        
+        JRottm:
+          textures/base/pack/player_marker.png
+        
+        srifqi:
+          textures/base/pack/chat_hide_btn.png
+          textures/base/pack/chat_show_btn.png
+          textures/base/pack/joystick_bg.png
+          textures/base/pack/joystick_center.png
+          textures/base/pack/joystick_off.png
+          textures/base/pack/minimap_btn.png
+        
+        Zughy:
+          textures/base/pack/cdb_add.png
+          textures/base/pack/cdb_downloading.png
+          textures/base/pack/cdb_queued.png
+          textures/base/pack/cdb_update.png
+          textures/base/pack/cdb_update_cropped.png
+          textures/base/pack/cdb_viewonline.png
+          textures/base/pack/settings_btn.png
+          textures/base/pack/settings_info.png
+          textures/base/pack/settings_reset.png
+        
+        appgurueu:
+          textures/base/pack/server_incompatible.png
+        
+        erlehmann, Warr1024, rollerozxa:
+          textures/base/pack/no_screenshot.png
+        
+        kilbith:
+          textures/base/pack/server_favorite.png
+          textures/base/pack/progress_bar.png
+          textures/base/pack/progress_bar_bg.png
+        
+        SmallJoker:
+          textures/base/pack/cdb_clear.png
+          textures/base/pack/server_favorite_delete.png (based on server_favorite.png)
+        
+        DS:
+          games/devtest/mods/soundstuff/textures/soundstuff_bigfoot.png
+          games/devtest/mods/soundstuff/textures/soundstuff_jukebox.png
+          games/devtest/mods/soundstuff/textures/soundstuff_racecar.png
+          games/devtest/mods/soundstuff/sounds/soundstuff_sinus.ogg
+          games/devtest/mods/testtools/textures/testtools_branding_iron.png
+        
+        grorp:
+          textures/base/pack/exit_btn.png
+        
+        License of Minetest source code
+        -------------------------------
+        
+        Minetest
+        Copyright (C) 2010-2018 celeron55, Perttu Ahola <celeron55@gmail.com>
+        
+        This program is free software; you can redistribute it and/or modify
+        it under the terms of the GNU Lesser General Public License as published by
+        the Free Software Foundation; either version 2.1 of the License, or
+        (at your option) any later version.
+        
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU Lesser General Public License for more details.
+        
+        You should have received a copy of the GNU Lesser General Public License along
+        with this program; if not, write to the Free Software Foundation, Inc.,
+        51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+        
+        Irrlicht
+        ---------------
+        
+        This program uses IrrlichtMt, Minetest's fork of
+        the Irrlicht Engine. http://irrlicht.sourceforge.net/
+        
+         The Irrlicht Engine License
+        
+        Copyright © 2002-2005 Nikolaus Gebhardt
+        
+        This software is provided 'as-is', without any express or implied
+        warranty. In no event will the authors be held liable for any damages
+        arising from the use of this software.
+        
+        Permission is granted to anyone to use this software for any purpose,
+        including commercial applications, and to alter it and redistribute
+        it freely, subject to the following restrictions:
+        
+           1. The origin of this software must not be misrepresented; you
+              must not claim that you wrote the original software. If you use
+        	  this software in a product, an acknowledgment in the product
+        	  documentation would be appreciated but is not required.
+           2. Altered source versions must be plainly marked as such, and must
+              not be misrepresented as being the original software.
+           3. This notice may not be removed or altered from any source
+              distribution.
+        
+        
+        JThread
+        ---------------
+        
+        This program uses the JThread library. License for JThread follows:
+        
+        Copyright (c) 2000-2006  Jori Liesenborgs (jori.liesenborgs@gmail.com)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a
+        copy of this software and associated documentation files (the "Software"),
+        to deal in the Software without restriction, including without limitation
+        the rights to use, copy, modify, merge, publish, distribute, sublicense,
+        and/or sell copies of the Software, and to permit persons to whom the
+        Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included
+        in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+        THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+        FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+        IN THE SOFTWARE.
+        
+        Lua
+        ---------------
+        
+        Lua is licensed under the terms of the MIT license reproduced below.
+        This means that Lua is free software and can be used for both academic
+        and commercial purposes at absolutely no cost.
+        
+        For details and rationale, see https://www.lua.org/license.html .
+        
+        Copyright (C) 1994-2008 Lua.org, PUC-Rio.
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+        
+        Fonts
+        ---------------
+        
+        Bitstream Vera Fonts Copyright:
+        
+          Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is
+          a trademark of Bitstream, Inc.
+        
+        Arimo - Apache License, version 2.0
+          Digitized data copyright (c) 2010-2012 Google Corporation.
+        
+        Cousine - Apache License, version 2.0
+          Digitized data copyright (c) 2010-2012 Google Corporation.
+        
+        DroidSansFallBackFull:
+        
+          Copyright (C) 2008 The Android Open Source Project
+        
+          Licensed under the Apache License, Version 2.0 (the "License");
+          you may not use this file except in compliance with the License.
+          You may obtain a copy of the License at
+        
+             http://www.apache.org/licenses/LICENSE-2.0
+        
+          Unless required by applicable law or agreed to in writing, software
+          distributed under the License is distributed on an "AS IS" BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+          See the License for the specific language governing permissions and
+          limitations under the License.
+        
+Keywords: gymnasium,minetest,minecraft,reinforcement learning
+Description-Content-Type: text/markdown
+Provides-Extra: examples
+License-File: LICENSE.txt
+
+[![Documentation Status](https://readthedocs.org/projects/craftium/badge/?version=latest)](https://craftium.readthedocs.io/en/latest/?badge=latest)
+
+# Craftium
+
+<img src="../craftium-docs/imgs/craftium_logo.png" alt="Craftium logo" width="350" align="right">
+
+✨ *Imagine the richness of Minecraft: open worlds, procedural generation, fully destructible voxel environments... but open source, without Java, easily extensible in [Lua](https://www.lua.org), and with the modern [Gymnasium](https://gymnasium.farama.org/index.html) and [PettingZoo](https://pettingzoo.farama.org/) APIs for AI single-and multi-agent research... This is* **Craftium!** ✨
+
+**[[Docs](https://craftium.readthedocs.io/en/latest/)] [[GitHub](https://github.com/mikelma/craftium/)] [[Paper (ArXiv)](https://arxiv.org/abs/2407.03969)]**
+
+<p align="left">
+  <img src="../craftium-docs/imgs/env_chop_tree.gif" width="100" align="center">
+  <img src="../craftium-docs/imgs/env_room.gif" width="100" align="center">
+  <img src="../craftium-docs/imgs/env_speleo.gif" width="100" align="center">
+  <img src="../craftium-docs/imgs/env_spiders_attack.gif" width="100", align="center">
+</p>
+
+[Craftium](https://craftium.readthedocs.io/en/latest/) is a fully open-source platform for creating fast, rich, and diverse **single and multi-agent** environments. Craftium is based on the amazing [Luanti](https://www.luanti.org/) voxel game engine and the popular [Gymnasium](https://gymnasium.farama.org/index.html) and [PettingZoo](https://pettingzoo.farama.org/) APIs. Craftium forks Luanti to support:
+
+- Connecting to Craftium's Python process (sending environment's data and receiving agent's action commands)
+- Executing Craftium actions as keyboard and mouse controls.
+- Extensions to the Lua API for creating RL environments.
+- Enabling soft resets of the environments without restarting the engine.
+- Luanti client(s)/server synchronization for slow agents (e.g., LLMs or VLMs).
+
+📚 Craftium's documentation can be found [here](https://craftium.readthedocs.io/en/latest/).
+
+📑 If you use craftium in your projects or research please consider [citing](#citing-craftium) the project, and don't hesitate to let us know what you have created using the library! 🤗
+
+## Features ✨
+
+- **Super extensible 🧩:** Luanti is built with modding in mind! The game engine is completely extensible using the [Lua](https://www.lua.org) programming language. Easily create mods to implement the environment that suits the needs of your research! See [environments](https://craftium.readthedocs.io/en/latest/environments/) for a showcase of what is possible with craftium.
+
+- **Blazingly fast ⚡:** Craftium achieves +2K steps per second more than Minecraft-based alternatives! Environment richness, 3D, computational efficiency all meet in craftium!
+
+- **Extensive documentation 📚:** Craftium extensively [documents](https://craftium.readthedocs.io) how to [use](https://craftium.readthedocs.io/en/latest/getting-started/) existing [environments](https://craftium.readthedocs.io/en/latest/environments) and [create](https://craftium.readthedocs.io/en/latest/creating-envs/) new ones. The documentation also includes a low-level [reference](https://craftium.readthedocs.io/en/latest/reference/) of the exported Python classes and gymnasium [Wrappers](https://craftium.readthedocs.io/en/latest/wrappers/), [extensions to the Lua API](https://craftium.readthedocs.io/en/latest/lua_functions/), and [code examples](https://craftium.readthedocs.io/en/latest/lua_env_cookbook/). Moreover, Craftium greatly benefits from existing Luanti documentation like the [wiki](https://wiki.luanti.org/), [reference](https://api.luanti.org/), and [modding book](https://rubenwardy.com/minetest_modding_book/en/basics/getting_started.html).
+
+- **Modern API 🤖:** Craftium implements the well-known [Gymnasium](https://gymnasium.farama.org/index.html)'s [PettingZoo](https://pettingzoo.farama.org/) APIs, opening the door to a huge number of existing tools and libraries compatible with these APIs. For example, [stable-baselines3](https://stable-baselines3.readthedocs.io) or [CleanRL](https://github.com/vwxyzjn/cleanrl) (check [examples](#examples-) section!).
+
+- **Fully open source 🤠:** Both, craftium and Luanti are fully open-source projects. This allowed us to modify Luanti's source code to tightly integrate it with our library, reducing the number of ugly hacks.
+
+- **No more Java 👹:** The Minecraft game is written in Java, not a very friendly language for clusters and high-performance applications. Contrarily, Luanti is written in C++, much more friendly for clusters, and highly performant!
+
+## Installation ⚙️
+
+First, clone craftium using the `--recurse-submodules` flag (**important**: the flag fetches submodules needed by the library) and `cd` into the project's main directory:
+
+```bash
+git clone --recurse-submodules https://github.com/mikelma/craftium.git # if you prefer ssh: git@github.com:mikelma/craftium.git
+cd craftium
+```
+
+`craftium` depends on [Luanti](https://github.com/luanti-org/luanti), which in turn, depends on a series of libraries that we need to install. Luanti's repo contains [instructions](https://github.com/luanti-org/luanti/blob/master/doc/compiling/linux.md) on how to setup the build environment for many Linux distros (and [MacOS](https://github.com/luanti-org/luanti/blob/master/doc/compiling/macos.md). In Ubuntu/Debian the following command installs all the required libraries:
+
+```bash
+sudo apt install g++ make libc6-dev cmake libpng-dev libjpeg-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev gettext libsdl2-dev
+```
+
+Additionally, `craftium` requires Python's header files to build a dedicated Python module implemented in C (`mt_server`):
+
+```bash
+sudo apt install libpython3-dev
+```
+
+Then, check that `setuptools` is updated and run the installation command in the craftium repo's directory:
+
+```bash
+pip install -U setuptools
+```
+
+and,
+
+```bash
+pip install .
+```
+
+This last command should compile Luanti, install python dependencies, and, finally, craftium. If the installation process fails, please consider submitting an issue [here](https://github.com/mikelma/craftium/issues). Note that this command only installs the minimum dependencies to run craftium, execute `pip install ".[examples]"` for installing optional dependencies (e.g., for running examples).
+
+## Getting started 💡
+
+As craftium implements the Gymnasium and PettingZoo APIs, using craftium environments is as simple as using any Gymnasium environment. The example below shows the implementation of a random agent in one of the craftium's default environments:
+
+```python
+import gymnasium as gym
+import craftium
+
+env = gym.make("Craftium/ChopTree-v0")
+
+observation, info = env.reset()
+
+for t in range(100):
+    action = env.action_space.sample()  # get a random action
+    observation, reward, terminated, truncated, _info = env.step(action)
+
+    if terminated or truncated:
+        observation, info = env.reset()
+
+env.close()
+```
+
+Training a CNN-based agent using PPO is as simple as:
+
+```python
+from stable_baselines3 import PPO
+from stable_baselines3.common import logger
+import gymnasium as gym
+import craftium
+
+env = gym.make("Craftium/ChopTree-v0")
+
+model = PPO("CnnPolicy", env, verbose=1)
+
+new_logger = logger.configure("logs-ppo-agent", ["stdout", "csv"])
+model.set_logger(new_logger)
+model.learn(total_timesteps=1_000_000)
+
+env.close()
+```
+
+This example trains a CNN-based agent for 1M timesteps in the `Craftium/ChopTree-v0` environment using PPO. Additionally, we set up a custom logger that records training statistics to a CSV file inside the `logs-ppo-agent/` directory.
+
+Craftium is not only limited to "typical" RL scenarios, its versatility makes it the ideal platform for meta-RL, open-ended learning, continual and lifelong RL, or unsupervised environment design (and more!). As a showcase, Craftium provides open-world and procedurally generated tasks (see [environments](https://craftium.readthedocs.io/en/latest/environments/) for more info). This code snippet initializes a procedurally generated dungeon environment with 5 rooms and a maximum number of 4 monsters per room:
+```python
+env, map_str = craftium.make_dungeon_env(
+    mapgen_kwargs=dict(
+        n_rooms=5,
+        max_monsters_per_room=5,
+    ),
+    return_map_str=True,
+)
+print(map_str.split("-")[1])
+```
+
+## Examples 🤓
+
+By implementing Gymnasium's API, craftium supports many existing tools and libraries. Check these scripts for some examples:
+
+- **Stable baselines3**: [sb3_train.py](https://github.com/mikelma/craftium/blob/main/sb3_train.py)
+- **Ray rllib**: [sb3_train.py](https://github.com/mikelma/craftium/blob/main/ray_train.py)
+- **CleanRL**: [cleanrl_ppo_train.py](https://github.com/mikelma/craftium/blob/main/cleanrl_ppo_train.py)
+
+## Citing Craftium 📑
+
+```bibtex
+@article{malagon2024craftium,
+  title={Craftium: An Extensible Framework for Creating Reinforcement Learning Environments},
+  author={Mikel Malag{\'o}n and Josu Ceberio and Jose A. Lozano},
+  journal={arXiv preprint arXiv:2407.03969},
+  year={2024}
+}
+```
+
+## Contributing 🏋️
+
+We appreciate contributions to craftium! craftium is in early development, so many possible improvements and bugs are expected. If you have found a bug or have a suggestion, please consider opening an [issue](https://github.com/mikelma/craftium/issues) if it isn't already covered. In case you want to submit a fix or an improvement to the library, [pull requests](https://github.com/mikelma/craftium/pulls) are also very welcome!
+
+## License 📖
+
+Craftium forks [Luanti](https://github.com/luanti-org/luant) and its source code is distributed with this library. Craftium maintains the same licenses as Luanti:  MIT for code and CC-BY-SA 3.0 for content.
+
+## Acknowledgements 🤗
+
+We thank the Luanti and Farama developers and community for maintaining such an excellent open-source project. We also thank [minerl](minerl.readthedocs.io/), and projects integrating Luanti with RL ([here](https://github.com/EleutherAI/minetest) and [here](https://github.com/Astera-org/minetest)) for serving as inspiration for this project.
+
+We are especially grateful to:
+- [@vadel](https://github.com/vadel) for helping with obscure bugs 🐛.
+- [@abarrainkua](https://github.com/abarrainkua) for reading preliminary versions of the paper.
+- _Pascu_ for the technical support in HPC.
