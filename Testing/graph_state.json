@@ -1,0 +1,182 @@
+{
+    "nodes": [
+        {
+            "id": "A",
+            "label": "A",
+            "color": "skyblue",
+            "value": false
+        },
+        {
+            "id": "C",
+            "label": "C",
+            "color": "lightgreen",
+            "value": false
+        },
+        {
+            "id": "B",
+            "label": "B",
+            "color": "skyblue",
+            "value": false
+        },
+        {
+            "id": "D",
+            "label": "D",
+            "color": "lightgreen",
+            "value": false
+        },
+        {
+            "id": "E",
+            "label": "E",
+            "color": "lightgreen",
+            "value": false
+        },
+        {
+            "id": "F",
+            "label": "F",
+            "color": "lightgreen",
+            "value": false
+        }
+    ],
+    "edges": [
+        {
+            "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "A",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        },
+        {
+            "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "A",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        },
+        {
+            "source": "A",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "A",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        },
+        {
+            "source": "B",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "B",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "B",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "B",
+            "target": "C",
+            "relation": "AND",
+            "color": "orange",
+            "group": "AB"
+        },
+        {
+            "source": "C",
+            "target": "D",
+            "relation": "IMPLIES",
+            "color": "red",
+            "group": "C"
+        },
+        {
+            "source": "C",
+            "target": "D",
+            "relation": "IMPLIES",
+            "color": "red",
+            "group": "C"
+        },
+        {
+            "source": "C",
+            "target": "D",
+            "relation": "IMPLIES",
+            "color": "red",
+            "group": "C"
+        },
+        {
+            "source": "D",
+            "target": "E",
+            "relation": "NOT",
+            "color": "blue",
+            "group": "D"
+        },
+        {
+            "source": "D",
+            "target": "E",
+            "relation": "NOT",
+            "color": "blue",
+            "group": "D"
+        },
+        {
+            "source": "D",
+            "target": "E",
+            "relation": "NOT",
+            "color": "blue",
+            "group": "D"
+        },
+        {
+            "source": "E",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        },
+        {
+            "source": "E",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        },
+        {
+            "source": "E",
+            "target": "F",
+            "relation": "OR",
+            "color": "purple",
+            "group": "AE"
+        }
+    ]
+}

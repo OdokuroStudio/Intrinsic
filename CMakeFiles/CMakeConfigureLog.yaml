@@ -1,0 +1,1943 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Linux - 5.15.167.4-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/zss/Intrinsic/craftium/CMakeFiles/3.28.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/zss/Intrinsic/craftium/CMakeFiles/3.28.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_76f24/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_76f24.dir/build.make CMakeFiles/cmTC_76f24.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A'
+        Building C object CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_76f24.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_76f24.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccf1XFFX.s
+        GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 38987c28e967c64056a6454abdef726e
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_76f24.dir/'
+         as -v --64 -o CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o /tmp/ccf1XFFX.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_76f24
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76f24.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o -o cmTC_76f24 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_76f24' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_76f24.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjpiD9C.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_76f24 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_76f24' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_76f24.'
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_76f24/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_76f24.dir/build.make CMakeFiles/cmTC_76f24.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Dhmf3A']
+        ignore line: [Building C object CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_76f24.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_76f24.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccf1XFFX.s]
+        ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 38987c28e967c64056a6454abdef726e]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_76f24.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o /tmp/ccf1XFFX.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_76f24]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76f24.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o -o cmTC_76f24 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_76f24' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_76f24.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjpiD9C.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_76f24 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccjpiD9C.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_76f24] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_76f24.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_61693/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_61693.dir/build.make CMakeFiles/cmTC_61693.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ'
+        Building CXX object CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61693.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_61693.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccm7X2MS.s
+        GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/13
+         /usr/include/x86_64-linux-gnu/c++/13
+         /usr/include/c++/13/backward
+         /usr/lib/gcc/x86_64-linux-gnu/13/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: c81c05345ce537099dafd5580045814a
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61693.dir/'
+         as -v --64 -o CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccm7X2MS.s
+        GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_61693
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61693.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_61693 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_61693' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_61693.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3ADOcQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_61693 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_61693' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_61693.'
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/13]
+          add: [/usr/include/x86_64-linux-gnu/c++/13]
+          add: [/usr/include/c++/13/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/13] ==> [/usr/include/c++/13]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/13] ==> [/usr/include/x86_64-linux-gnu/c++/13]
+        collapse include dir [/usr/include/c++/13/backward] ==> [/usr/include/c++/13/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/13/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/13/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/13;/usr/include/x86_64-linux-gnu/c++/13;/usr/include/c++/13/backward;/usr/lib/gcc/x86_64-linux-gnu/13/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_61693/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_61693.dir/build.make CMakeFiles/cmTC_61693.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-pU5niJ']
+        ignore line: [Building CXX object CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61693.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_61693.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccm7X2MS.s]
+        ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/13"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/13]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/13]
+        ignore line: [ /usr/include/c++/13/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/13/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: c81c05345ce537099dafd5580045814a]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61693.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccm7X2MS.s]
+        ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_61693]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61693.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_61693 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 13.3.0-6ubuntu2~24.04' --with-bugurl=file:///usr/share/doc/gcc-13/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-13 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-13-fG75Ri/gcc-13-13.3.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_61693' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_61693.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3ADOcQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_61693 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc3ADOcQ.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_61693] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
+          arg [CMakeFiles/cmTC_61693.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13] ==> [/usr/lib/gcc/x86_64-linux-gnu/13]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/13;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:245 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_SDL_VERSION"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-AkkLdN"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-AkkLdN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_SDL_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-AkkLdN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6e59d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6e59d.dir/build.make CMakeFiles/cmTC_6e59d.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-AkkLdN'
+        Building CXX object CMakeFiles/cmTC_6e59d.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_SDL_VERSION -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_6e59d.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-AkkLdN/src.cxx
+        Linking CXX executable cmTC_6e59d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e59d.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_6e59d.dir/src.cxx.o -o cmTC_6e59d 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-AkkLdN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:270 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_GL_VERSION_4_5"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-79DxqX"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-79DxqX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_GL_VERSION_4_5"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-79DxqX'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d8800/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d8800.dir/build.make CMakeFiles/cmTC_d8800.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-79DxqX'
+        Building CXX object CMakeFiles/cmTC_d8800.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_GL_VERSION_4_5 -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_d8800.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-79DxqX/src.cxx
+        Linking CXX executable cmTC_d8800
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8800.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_d8800.dir/src.cxx.o -o cmTC_d8800 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-79DxqX'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 25%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [ 50%] Linking CXX static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.cpp.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 75%] Building CXX object CMakeFiles/boo.dir/main.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [100%] Linking CXX executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/c++ -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 25%] Building C object CMakeFiles/foo.dir/foo.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [ 50%] Linking C static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.c.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 75%] Building C object CMakeFiles/boo.dir/main.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [100%] Linking C executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/cc -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "lib/sha256/CMakeLists.txt:8 (check_include_files)"
+    checks:
+      - "Looking for include file endian.h"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-uBFW9P"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-uBFW9P"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_ENDIAN_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-uBFW9P'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9db0c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9db0c.dir/build.make CMakeFiles/cmTC_9db0c.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-uBFW9P'
+        Building C object CMakeFiles/cmTC_9db0c.dir/HAVE_ENDIAN_H.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_9db0c.dir/HAVE_ENDIAN_H.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-uBFW9P/HAVE_ENDIAN_H.c
+        Linking C executable cmTC_9db0c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9db0c.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_9db0c.dir/HAVE_ENDIAN_H.c.o -o cmTC_9db0c 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-uBFW9P'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "src/CMakeLists.txt:7 (check_type_size)"
+    checks:
+      - "Check size of int"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-9ZoKtI"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-9ZoKtI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_SIZEOF_INT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-9ZoKtI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_42ce4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_42ce4.dir/build.make CMakeFiles/cmTC_42ce4.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-9ZoKtI'
+        Building CXX object CMakeFiles/cmTC_42ce4.dir/SIZEOF_INT.cpp.o
+        /usr/bin/c++   -std=gnu++17 -o CMakeFiles/cmTC_42ce4.dir/SIZEOF_INT.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-9ZoKtI/SIZEOF_INT.cpp
+        Linking CXX executable cmTC_42ce4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42ce4.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_42ce4.dir/SIZEOF_INT.cpp.o -o cmTC_42ce4 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-9ZoKtI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:254 (check_include_file_cxx)"
+      - "src/CMakeLists.txt:12 (check_type_size)"
+    checks:
+      - "Looking for C++ include sys/types.h"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-hDSlWr"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-hDSlWr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-hDSlWr'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e8217/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e8217.dir/build.make CMakeFiles/cmTC_e8217.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-hDSlWr'
+        Building CXX object CMakeFiles/cmTC_e8217.dir/CheckIncludeFile.cxx.o
+        /usr/bin/c++   -std=gnu++17 -o CMakeFiles/cmTC_e8217.dir/CheckIncludeFile.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-hDSlWr/CheckIncludeFile.cxx
+        Linking CXX executable cmTC_e8217
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8217.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_e8217.dir/CheckIncludeFile.cxx.o -o cmTC_e8217 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-hDSlWr'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:259 (check_include_file_cxx)"
+      - "src/CMakeLists.txt:12 (check_type_size)"
+    checks:
+      - "Looking for C++ include stdint.h"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sC77bf"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sC77bf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sC77bf'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1491d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1491d.dir/build.make CMakeFiles/cmTC_1491d.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sC77bf'
+        Building CXX object CMakeFiles/cmTC_1491d.dir/CheckIncludeFile.cxx.o
+        /usr/bin/c++   -std=gnu++17 -o CMakeFiles/cmTC_1491d.dir/CheckIncludeFile.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sC77bf/CheckIncludeFile.cxx
+        Linking CXX executable cmTC_1491d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1491d.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_1491d.dir/CheckIncludeFile.cxx.o -o cmTC_1491d 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sC77bf'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:260 (check_include_file_cxx)"
+      - "src/CMakeLists.txt:12 (check_type_size)"
+    checks:
+      - "Looking for C++ include stddef.h"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Lt91CB"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Lt91CB"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Lt91CB'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c5021/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c5021.dir/build.make CMakeFiles/cmTC_c5021.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Lt91CB'
+        Building CXX object CMakeFiles/cmTC_c5021.dir/CheckIncludeFile.cxx.o
+        /usr/bin/c++   -std=gnu++17 -o CMakeFiles/cmTC_c5021.dir/CheckIncludeFile.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Lt91CB/CheckIncludeFile.cxx
+        Linking CXX executable cmTC_c5021
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5021.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_c5021.dir/CheckIncludeFile.cxx.o -o cmTC_c5021 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Lt91CB'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "src/CMakeLists.txt:12 (check_type_size)"
+    checks:
+      - "Check size of size_t"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-XwgPIO"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-XwgPIO"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_SIZEOF_SIZE_T"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-XwgPIO'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4437c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4437c.dir/build.make CMakeFiles/cmTC_4437c.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-XwgPIO'
+        Building CXX object CMakeFiles/cmTC_4437c.dir/SIZEOF_SIZE_T.cpp.o
+        /usr/bin/c++   -std=gnu++17 -o CMakeFiles/cmTC_4437c.dir/SIZEOF_SIZE_T.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-XwgPIO/SIZEOF_SIZE_T.cpp
+        Linking CXX executable cmTC_4437c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4437c.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_4437c.dir/SIZEOF_SIZE_T.cpp.o -o cmTC_4437c 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-XwgPIO'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindIntl.cmake:110 (check_c_source_compiles)"
+      - "cmake/Modules/FindGettextLib.cmake:16 (find_package)"
+      - "src/CMakeLists.txt:97 (find_package)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-R8tvp2"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-R8tvp2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "Intl_IS_BUILT_IN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-R8tvp2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7fbf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7fbf.dir/build.make CMakeFiles/cmTC_e7fbf.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-R8tvp2'
+        Building C object CMakeFiles/cmTC_e7fbf.dir/src.c.o
+        /usr/bin/cc -DIntl_IS_BUILT_IN   -o CMakeFiles/cmTC_e7fbf.dir/src.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-R8tvp2/src.c
+        Linking C executable cmTC_e7fbf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7fbf.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_e7fbf.dir/src.c.o -o cmTC_e7fbf 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-R8tvp2'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/Modules/FindZstd.cmake:13 (check_symbol_exists)"
+      - "src/CMakeLists.txt:254 (find_package)"
+    checks:
+      - "Looking for ZSTD_initCStream"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-abwaDD"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-abwaDD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_ZSTD_INITCSTREAM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-abwaDD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5e6e2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5e6e2.dir/build.make CMakeFiles/cmTC_5e6e2.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-abwaDD'
+        Building C object CMakeFiles/cmTC_5e6e2.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_5e6e2.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-abwaDD/CheckSymbolExists.c
+        Linking C executable cmTC_5e6e2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e6e2.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_5e6e2.dir/CheckSymbolExists.c.o -o cmTC_5e6e2  /usr/lib/x86_64-linux-gnu/libzstd.so 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-abwaDD'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "src/CMakeLists.txt:271 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Yj4GRB"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Yj4GRB"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Yj4GRB'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_51611/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_51611.dir/build.make CMakeFiles/cmTC_51611.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Yj4GRB'
+        Building C object CMakeFiles/cmTC_51611.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_51611.dir/src.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Yj4GRB/src.c
+        Linking C executable cmTC_51611
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51611.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_51611.dir/src.c.o -o cmTC_51611 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Yj4GRB'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "src/CMakeLists.txt:316 (check_library_exists)"
+    checks:
+      - "Looking for clock_gettime in rt"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-o518Jb"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-o518Jb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_LIBRT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-o518Jb'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c8659/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c8659.dir/build.make CMakeFiles/cmTC_c8659.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-o518Jb'
+        Building C object CMakeFiles/cmTC_c8659.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=clock_gettime -o CMakeFiles/cmTC_c8659.dir/CheckFunctionExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-o518Jb/CheckFunctionExists.c
+        Linking C executable cmTC_c8659
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8659.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=clock_gettime CMakeFiles/cmTC_c8659.dir/CheckFunctionExists.c.o -o cmTC_c8659  -lrt 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-o518Jb'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "src/CMakeLists.txt:344 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_LINK_ATOMIC"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fr8VJR"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fr8VJR"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_LINK_ATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fr8VJR'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_82a77/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_82a77.dir/build.make CMakeFiles/cmTC_82a77.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fr8VJR'
+        Building C object CMakeFiles/cmTC_82a77.dir/src.c.o
+        /usr/bin/cc -DHAVE_LINK_ATOMIC   -o CMakeFiles/cmTC_82a77.dir/src.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fr8VJR/src.c
+        Linking C executable cmTC_82a77
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82a77.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_82a77.dir/src.c.o -o cmTC_82a77  -latomic 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fr8VJR'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "src/CMakeLists.txt:352 (check_symbol_exists)"
+    checks:
+      - "Looking for strlcpy"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-jpPbua"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-jpPbua"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_STRLCPY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-jpPbua'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4cdb9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4cdb9.dir/build.make CMakeFiles/cmTC_4cdb9.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-jpPbua'
+        Building C object CMakeFiles/cmTC_4cdb9.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_4cdb9.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-jpPbua/CheckSymbolExists.c
+        Linking C executable cmTC_4cdb9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cdb9.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_4cdb9.dir/CheckSymbolExists.c.o -o cmTC_4cdb9 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-jpPbua'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "src/CMakeLists.txt:355 (check_symbol_exists)"
+    checks:
+      - "Looking for malloc_trim"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LW3Qrq"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LW3Qrq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_MALLOC_TRIM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LW3Qrq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_315fc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_315fc.dir/build.make CMakeFiles/cmTC_315fc.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LW3Qrq'
+        Building C object CMakeFiles/cmTC_315fc.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_315fc.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LW3Qrq/CheckSymbolExists.c
+        Linking C executable cmTC_315fc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_315fc.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_315fc.dir/CheckSymbolExists.c.o -o cmTC_315fc 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LW3Qrq'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "src/CMakeLists.txt:756 (check_symbol_exists)"
+    checks:
+      - "Looking for luaopen_string_buffer"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-8jQ78i"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-8jQ78i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_RECENT_LJ"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-8jQ78i'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6b365/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6b365.dir/build.make CMakeFiles/cmTC_6b365.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-8jQ78i'
+        Building C object CMakeFiles/cmTC_6b365.dir/CheckSymbolExists.c.o
+        /usr/bin/cc  -I/usr/include/luajit-2.1  -o CMakeFiles/cmTC_6b365.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-8jQ78i/CheckSymbolExists.c
+        Linking C executable cmTC_6b365
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b365.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_6b365.dir/CheckSymbolExists.c.o -o cmTC_6b365  /usr/lib/x86_64-linux-gnu/libluajit-5.1.so -lm 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-8jQ78i'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:245 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_SDL_VERSION"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-PGsDQP"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-PGsDQP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_SDL_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-PGsDQP'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dca72/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dca72.dir/build.make CMakeFiles/cmTC_dca72.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-PGsDQP'
+        Building CXX object CMakeFiles/cmTC_dca72.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_SDL_VERSION -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_dca72.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-PGsDQP/src.cxx
+        Linking CXX executable cmTC_dca72
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dca72.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_dca72.dir/src.cxx.o -o cmTC_dca72 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-PGsDQP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:270 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_GL_VERSION_4_5"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-QZMFEv"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-QZMFEv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_GL_VERSION_4_5"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-QZMFEv'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_448b4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_448b4.dir/build.make CMakeFiles/cmTC_448b4.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-QZMFEv'
+        Building CXX object CMakeFiles/cmTC_448b4.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_GL_VERSION_4_5 -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_448b4.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-QZMFEv/src.cxx
+        Linking CXX executable cmTC_448b4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_448b4.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_448b4.dir/src.cxx.o -o cmTC_448b4 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-QZMFEv'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 25%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [ 50%] Linking CXX static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.cpp.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 75%] Building CXX object CMakeFiles/boo.dir/main.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [100%] Linking CXX executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/c++ -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 25%] Building C object CMakeFiles/foo.dir/foo.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [ 50%] Linking C static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.c.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 75%] Building C object CMakeFiles/boo.dir/main.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [100%] Linking C executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/cc -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/Modules/FindZstd.cmake:13 (check_symbol_exists)"
+      - "src/CMakeLists.txt:254 (find_package)"
+    checks:
+      - "Looking for ZSTD_initCStream"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sEsrOK"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sEsrOK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_ZSTD_INITCSTREAM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sEsrOK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_81f13/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_81f13.dir/build.make CMakeFiles/cmTC_81f13.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sEsrOK'
+        Building C object CMakeFiles/cmTC_81f13.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_81f13.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sEsrOK/CheckSymbolExists.c
+        Linking C executable cmTC_81f13
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81f13.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_81f13.dir/CheckSymbolExists.c.o -o cmTC_81f13  /usr/lib/x86_64-linux-gnu/libzstd.so 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-sEsrOK'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "src/CMakeLists.txt:756 (check_symbol_exists)"
+    checks:
+      - "Looking for luaopen_string_buffer"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-ZzLQs9"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-ZzLQs9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_RECENT_LJ"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-ZzLQs9'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b815c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b815c.dir/build.make CMakeFiles/cmTC_b815c.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-ZzLQs9'
+        Building C object CMakeFiles/cmTC_b815c.dir/CheckSymbolExists.c.o
+        /usr/bin/cc  -I/usr/include/luajit-2.1  -o CMakeFiles/cmTC_b815c.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-ZzLQs9/CheckSymbolExists.c
+        Linking C executable cmTC_b815c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b815c.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_b815c.dir/CheckSymbolExists.c.o -o cmTC_b815c  /usr/lib/x86_64-linux-gnu/libluajit-5.1.so -lm 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-ZzLQs9'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:245 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_SDL_VERSION"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-w0Yio3"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-w0Yio3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_SDL_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-w0Yio3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f1685/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f1685.dir/build.make CMakeFiles/cmTC_f1685.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-w0Yio3'
+        Building CXX object CMakeFiles/cmTC_f1685.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_SDL_VERSION -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_f1685.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-w0Yio3/src.cxx
+        Linking CXX executable cmTC_f1685
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1685.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_f1685.dir/src.cxx.o -o cmTC_f1685 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-w0Yio3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:270 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_GL_VERSION_4_5"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-3UsMzu"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-3UsMzu"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_GL_VERSION_4_5"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-3UsMzu'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_854ad/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_854ad.dir/build.make CMakeFiles/cmTC_854ad.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-3UsMzu'
+        Building CXX object CMakeFiles/cmTC_854ad.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_GL_VERSION_4_5 -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_854ad.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-3UsMzu/src.cxx
+        Linking CXX executable cmTC_854ad
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_854ad.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_854ad.dir/src.cxx.o -o cmTC_854ad 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-3UsMzu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 25%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [ 50%] Linking CXX static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.cpp.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 75%] Building CXX object CMakeFiles/boo.dir/main.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [100%] Linking CXX executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/c++ -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 25%] Building C object CMakeFiles/foo.dir/foo.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [ 50%] Linking C static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.c.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 75%] Building C object CMakeFiles/boo.dir/main.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [100%] Linking C executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/cc -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/Modules/FindZstd.cmake:13 (check_symbol_exists)"
+      - "src/CMakeLists.txt:254 (find_package)"
+    checks:
+      - "Looking for ZSTD_initCStream"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LicMNW"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LicMNW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_ZSTD_INITCSTREAM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LicMNW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f83b4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f83b4.dir/build.make CMakeFiles/cmTC_f83b4.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LicMNW'
+        Building C object CMakeFiles/cmTC_f83b4.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_f83b4.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LicMNW/CheckSymbolExists.c
+        Linking C executable cmTC_f83b4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f83b4.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_f83b4.dir/CheckSymbolExists.c.o -o cmTC_f83b4  /usr/lib/x86_64-linux-gnu/libzstd.so 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-LicMNW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "src/CMakeLists.txt:756 (check_symbol_exists)"
+    checks:
+      - "Looking for luaopen_string_buffer"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Ghl4D5"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Ghl4D5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_RECENT_LJ"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Ghl4D5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fb076/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fb076.dir/build.make CMakeFiles/cmTC_fb076.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Ghl4D5'
+        Building C object CMakeFiles/cmTC_fb076.dir/CheckSymbolExists.c.o
+        /usr/bin/cc  -I/usr/include/luajit-2.1  -o CMakeFiles/cmTC_fb076.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Ghl4D5/CheckSymbolExists.c
+        Linking C executable cmTC_fb076
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb076.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_fb076.dir/CheckSymbolExists.c.o -o cmTC_fb076  /usr/lib/x86_64-linux-gnu/libluajit-5.1.so -lm 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Ghl4D5'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:245 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_SDL_VERSION"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-JpJeBa"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-JpJeBa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_SDL_VERSION"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-JpJeBa'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_79456/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_79456.dir/build.make CMakeFiles/cmTC_79456.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-JpJeBa'
+        Building CXX object CMakeFiles/cmTC_79456.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_SDL_VERSION -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_79456.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-JpJeBa/src.cxx
+        Linking CXX executable cmTC_79456
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79456.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_79456.dir/src.cxx.o -o cmTC_79456 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-JpJeBa'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "irr/src/CMakeLists.txt:270 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test CHECK_GL_VERSION_4_5"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Zv5fF1"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Zv5fF1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/;/home/zss/Intrinsic/craftium/irr/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "TRUE"
+    buildResult:
+      variable: "CHECK_GL_VERSION_4_5"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Zv5fF1'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bd856/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bd856.dir/build.make CMakeFiles/cmTC_bd856.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Zv5fF1'
+        Building CXX object CMakeFiles/cmTC_bd856.dir/src.cxx.o
+        /usr/bin/c++ -DCHECK_GL_VERSION_4_5 -I/usr/include/SDL2 -std=gnu++17 -fPIE -o CMakeFiles/cmTC_bd856.dir/src.cxx.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Zv5fF1/src.cxx
+        Linking CXX executable cmTC_bd856
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd856.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_bd856.dir/src.cxx.o -o cmTC_bd856 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-Zv5fF1'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 25%] Building CXX object CMakeFiles/foo.dir/foo.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [ 50%] Linking CXX static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.cpp.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [ 75%] Building CXX object CMakeFiles/boo.dir/main.cpp.o
+        /usr/bin/c++   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.cpp.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [100%] Linking CXX executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/c++ -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:138 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckIPOSupported.cmake:266 (_ipo_run_language_check)"
+      - "CMakeLists.txt:111 (check_ipo_supported)"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin"
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile
+        /usr/bin/cmake -S/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src -B/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin --check-build-system CMakeFiles/Makefile.cmake 0
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin//CMakeFiles/progress.marks
+        /usr/bin/gmake  -f CMakeFiles/Makefile2 all
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/foo.dir/depend.internal".
+        Scanning dependencies of target foo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 25%] Building C object CMakeFiles/foo.dir/foo.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/foo.dir/foo.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [ 50%] Linking C static library libfoo.a
+        /usr/bin/cmake -P CMakeFiles/foo.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/foo.dir/link.txt --verbose=1
+        "/usr/bin/gcc-ar-13" cr libfoo.a CMakeFiles/foo.dir/foo.c.o
+        "/usr/bin/gcc-ranlib-13" libfoo.a
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 50%] Built target foo
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/depend
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        cd /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/DependInfo.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Dependee "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles/boo.dir/depend.internal".
+        Scanning dependencies of target boo
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/gmake  -f CMakeFiles/boo.dir/build.make CMakeFiles/boo.dir/build
+        gmake[2]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [ 75%] Building C object CMakeFiles/boo.dir/main.c.o
+        /usr/bin/cc   -flto=auto -fno-fat-lto-objects -o CMakeFiles/boo.dir/main.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [100%] Linking C executable boo
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/boo.dir/link.txt --verbose=1
+        /usr/bin/cc -flto=auto -fno-fat-lto-objects CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a 
+        gmake[2]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        [100%] Built target boo
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin'
+        /usr/bin/cmake -E cmake_progress_start /home/zss/Intrinsic/craftium/CMakeFiles/_CMakeLTOTest-C/bin/CMakeFiles 0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "cmake/Modules/FindZstd.cmake:13 (check_symbol_exists)"
+      - "src/CMakeLists.txt:254 (find_package)"
+    checks:
+      - "Looking for ZSTD_initCStream"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-UZSw6X"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-UZSw6X"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_ZSTD_INITCSTREAM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-UZSw6X'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9e019/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9e019.dir/build.make CMakeFiles/cmTC_9e019.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-UZSw6X'
+        Building C object CMakeFiles/cmTC_9e019.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_9e019.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-UZSw6X/CheckSymbolExists.c
+        Linking C executable cmTC_9e019
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e019.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_9e019.dir/CheckSymbolExists.c.o -o cmTC_9e019  /usr/lib/x86_64-linux-gnu/libzstd.so 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-UZSw6X'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "src/CMakeLists.txt:756 (check_symbol_exists)"
+    checks:
+      - "Looking for luaopen_string_buffer"
+    directories:
+      source: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fvgF1Z"
+      binary: "/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fvgF1Z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/zss/Intrinsic/craftium/cmake/Modules/"
+    buildResult:
+      variable: "HAVE_RECENT_LJ"
+      cached: true
+      stdout: |
+        Change Dir: '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fvgF1Z'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4470f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4470f.dir/build.make CMakeFiles/cmTC_4470f.dir/build
+        gmake[1]: Entering directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fvgF1Z'
+        Building C object CMakeFiles/cmTC_4470f.dir/CheckSymbolExists.c.o
+        /usr/bin/cc  -I/usr/include/luajit-2.1  -o CMakeFiles/cmTC_4470f.dir/CheckSymbolExists.c.o -c /home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fvgF1Z/CheckSymbolExists.c
+        Linking C executable cmTC_4470f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4470f.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_4470f.dir/CheckSymbolExists.c.o -o cmTC_4470f  /usr/lib/x86_64-linux-gnu/libluajit-5.1.so -lm 
+        gmake[1]: Leaving directory '/home/zss/Intrinsic/craftium/CMakeFiles/CMakeScratch/TryCompile-fvgF1Z'
+        
+      exitCode: 0
+...
